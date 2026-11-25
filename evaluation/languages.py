@@ -12,7 +12,15 @@ from text_to_graph.models import parser
 def check(code, text):
     pipeline = parser(code)
     doc = pipeline(text)
-    if ROUTES[code]["backend"] == "installed":
+    backend = ROUTES[code]["backend"]
+    if backend in {"installed", "stanza", "spacy", "spacy_package"}:
+        rows = list(pipeline.pipe([text, text], batch_size=2))
+        assert len(rows) == 2
+        if backend == "installed":
+            assert all(row.to_json() == doc.to_json() for row in rows)
+        else:
+            assert all(row.sents == doc.sents for row in rows)
+    if backend == "installed":
         assert doc.has_annotation("DEP") and doc.has_annotation("SENT_START")
         assert all(text[t.idx : t.idx + len(t)] == t.text for t in doc)
     else:

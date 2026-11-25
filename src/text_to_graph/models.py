@@ -1,15 +1,20 @@
 """Lazy local inference, with reproducible Hugging Face checkpoint revisions."""
 
+from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
-from itertools import pairwise
+from itertools import batched, pairwise
 from pathlib import Path
 from threading import Lock, RLock
 
+from . import backend
+from .batching import isolated
 from .cache import LanguageCache, default_limit
 from .catalog import ASSETS, ROUTES, asset_path
 from .vocabulary import SENSES
 
 _inference_lock = RLock()
+# MLX model creation, warmup, and inference share a thread-local Metal stream.
+_metal_worker = ThreadPoolExecutor(max_workers=1, thread_name_prefix="gliner-metal")
 
 
 _language_cache = None
@@ -85,7 +90,14 @@ def parser(lang):
 def extractor():
     from gliner2 import AutoExtractor
 
-    return AutoExtractor.from_pretrained(snapshot(GLINER), local_files_only=True)
+    path = snapshot(GLINER)
+    if backend.selected() == "metal":
+        from .metal import load
+
+        return load(path)
+    return AutoExtractor.from_pretrained(
+        path, local_files_only=True, map_location=backend.selected()
+    )
 
 
 def resolver(nlp):
@@ -94,24 +106,40 @@ def resolver(nlp):
     return FCoref(
         model_name_or_path=snapshot(COREF),
         nlp=nlp,
-        device="cpu",
+        device=backend.devices()["english_coreference"],
         enable_progress_bar=False,
     )
 
 
-def predict(text, relations):
-    with _inference_lock:
-        return _predict(text, relations)
-
-
-def _predict(text, relations):
-    model = extractor()
-    schema = model.create_schema().entities(
-        ["person", "organization", "place", "work", "object", "quantity", "time"]
+@lru_cache(maxsize=128)
+def schema(relations):
+    result = (
+        extractor()
+        .create_schema()
+        .entities(
+            ["person", "organization", "place", "work", "object", "quantity", "time"]
+        )
     )
-    schema.relations(sorted(relations))
-    schema.classification("predicate_senses", SENSES, multi_label=True, top_k=3)
-    return model.extract_long(text, schema, include_spans=True, include_confidence=True)
+    result.relations(list(relations))
+    result.classification("predicate_senses", SENSES, multi_label=True, top_k=3)
+    return result
+
+
+def _predict_many(items):
+    with _inference_lock:
+        return extractor().batch_extract_long(
+            [text for text, _ in items],
+            [schema(relations) for _, relations in items],
+            batch_size=len(items),
+            include_spans=True,
+            include_confidence=True,
+        )
+
+
+def predict_many(items):
+    if backend.selected() == "metal":
+        return _metal_worker.submit(_predict_many, items).result()
+    return _predict_many(items)
 
 
 def coreference_model(bundle):
@@ -144,28 +172,58 @@ def preload_languages(languages):
     return cache.resident()
 
 
-def coreference_clusters(source, doc, bundle):
-    """Use adjacent sentences as a second context for unlinked pronouns."""
-    coref = coreference_model(bundle)
-    clusters = coref.predict(texts=[source])[0].get_clusters(as_strings=False)
+def _pronoun_windows(doc, clusters):
     sentences = list(doc.sents) if doc is not None else []
-    if len(sentences) <= 2:
-        return clusters
-    windows = []
-    for left, right in pairwise(sentences):
-        if any(
-            t.pos_ == "PRON"
-            and not any(a <= t.idx < z for cluster in clusters for a, z in cluster)
-            for t in right
+    if len(sentences) > 2:
+        for left, right in pairwise(sentences):
+            if any(
+                t.pos_ == "PRON"
+                and not any(a <= t.idx < z for cluster in clusters for a, z in cluster)
+                for t in right
+            ):
+                yield left.start_char, right.end_char
+
+
+def coreference_batch(sources, docs, bundle):
+    coref = coreference_model(bundle)
+
+    def predict(texts):
+        predictions = coref.predict(texts=list(texts), max_tokens_in_batch=2048)
+        rows = []
+        for text, prediction in zip(texts, predictions, strict=True):
+            mentions = prediction.get_clusters(as_strings=False)
+            if any(
+                not 0 <= start < end <= len(text)
+                for cluster in mentions
+                for start, end in cluster
+            ):
+                raise ValueError("Unaligned coreference span")
+            rows.append(mentions)
+        return rows
+
+    clusters = isolated(sources, predict)
+
+    def windows():
+        for i, (source, doc, primary) in enumerate(
+            zip(sources, docs, clusters, strict=True)
         ):
-            windows.append((left.start_char, right.end_char))
-    if windows:
-        predictions = coref.predict(texts=[source[a:z] for a, z in windows])
-        for (base, _), prediction in zip(windows, predictions):
-            clusters.extend(
-                [
-                    [(base + a, base + z) for a, z in cluster]
-                    for cluster in prediction.get_clusters(as_strings=False)
-                ]
-            )
+            if isinstance(primary, Exception):
+                continue
+            try:
+                intervals = list(_pronoun_windows(doc, primary))
+            except Exception as exc:  # noqa: BLE001 - isolate invalid sentence annotations
+                clusters[i] = exc
+                continue
+            for start, end in intervals:
+                yield i, start, source[start:end]
+
+    for group in batched(windows(), 4):
+        results = isolated([text for _, _, text in group], predict)
+        for (i, base, _), result in zip(group, results, strict=True):
+            if isinstance(result, Exception):
+                clusters[i] = result
+            elif not isinstance(clusters[i], Exception):
+                clusters[i].extend(
+                    [[(base + a, base + z) for a, z in mentions] for mentions in result]
+                )
     return clusters

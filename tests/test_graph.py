@@ -226,7 +226,7 @@ class Acceptance(unittest.TestCase):
             patch("text_to_graph.models.language_cache", return_value=LanguageCache(1)),
             patch("text_to_graph.models.parser", side_effect=OSError("missing")),
             patch("text_to_graph.models.resolver", side_effect=OSError("missing")),
-            patch("text_to_graph.models.predict", side_effect=OSError("missing")),
+            patch("text_to_graph.models.predict_many", side_effect=OSError("missing")),
         ):
             g = extract_graph("The library opened on Monday morning.")
         self.assertEqual(g.profile["status"], "partial")

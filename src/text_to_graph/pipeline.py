@@ -2,14 +2,19 @@
 
 import os
 import re
-from contextlib import ExitStack
+from collections import defaultdict
+from dataclasses import dataclass, field
+from functools import lru_cache
 from importlib.metadata import PackageNotFoundError, version
 
 from . import models
+from .batching import isolated
 from .catalog import LANGUAGES, ROUTES, asset_path
 from .graph import Builder, DocumentGraph
 from .semantics import Interpretation
 from .vocabulary import FRAMES, PROJECTIONS
+
+MAX_PASSAGE_CHARS = 12_000
 
 
 def language(text):
@@ -58,8 +63,8 @@ def regions(text, primary):
 
 def bounded(text, start, end):
     # Keep parser and resolver inputs bounded even on a single unpunctuated line.
-    while end - start > 12000:
-        window = text[start : start + 12000]
+    while end - start > MAX_PASSAGE_CHARS:
+        window = text[start : start + MAX_PASSAGE_CHARS]
         cuts = list(re.finditer(r"[.!?。！？؟।](?=\s)|\n", window))
         cut = cuts[-1].end() if cuts else max(1, window.rfind(" "))
         if cut < 1000:
@@ -70,21 +75,10 @@ def bounded(text, start, end):
         yield start, end
 
 
-def extract_graph(text: str, *, language_code=None) -> DocumentGraph:
-    if not isinstance(text, str):
-        raise TypeError("text must be a string")
-    if language_code is not None and language_code not in LANGUAGES:
-        raise ValueError("Unknown detector language code")
-    b = Builder(text)
-    profile = b.graph.profile
-    profile.update(
-        vocabulary_version="2",
-        status="complete",
-        routes=[],
-        models={"gliner": list(models.GLINER), "coreference": list(models.COREF)},
-        packages={},
-    )
-    for package in (
+@lru_cache(maxsize=1)
+def package_versions():
+    packages = {}
+    for name in (
         "gliner2",
         "fastcoref",
         "spacy",
@@ -92,11 +86,40 @@ def extract_graph(text: str, *, language_code=None) -> DocumentGraph:
         "fasttext-langdetect",
     ):
         try:
-            profile["packages"][package] = version(package)
+            packages[name] = version(name)
         except PackageNotFoundError:
-            profile["packages"][package] = None
+            packages[name] = None
+    return packages
+
+
+@dataclass
+class Passage:
+    builder: Builder
+    index: int
+    source: str
+    route: dict
+    doc: object = None
+    clusters: list = field(default_factory=list)
+    sentences: list = field(default_factory=list)
+    predictions: list = field(default_factory=list)
+
+    def fail(self, stage, error):
+        self.route["stages"][stage] = {"status": "unavailable", "reason": str(error)}
+        self.builder.graph.profile["status"] = "partial"
+
+
+def prepare(b, index, language_code):
+    text = b.text
+    profile = b.graph.profile
+    profile.update(
+        vocabulary_version="2",
+        status="complete",
+        routes=[],
+        models={"gliner": list(models.GLINER), "coreference": list(models.COREF)},
+        packages=package_versions().copy(),
+    )
     if not text.strip():
-        return b.graph
+        return
     try:
         if language_code:
             primary = {"lang": language_code, "score": None, "method": "explicit"}
@@ -105,81 +128,192 @@ def extract_graph(text: str, *, language_code=None) -> DocumentGraph:
             primary = language(text)
             parts = list(regions(text, primary))
         profile["language"] = primary
-    except Exception as exc:  # noqa: BLE001 - preserve failures at the model boundary
-        primary = {"lang": "und", "score": 0}
-        parts = [(0, len(text), primary)]
+    except Exception as exc:  # noqa: BLE001 - record detector failures in the graph
+        parts = [(0, len(text), {"lang": "und", "score": 0})]
         profile.update(status="partial", language_error=str(exc))
     for a, z, reading in parts:
+        lang, score = reading["lang"], reading["score"]
         for start, end in bounded(text, a, z):
-            if text[start:end].strip():
-                analyze(b, start, end, reading)
-    return b.graph
+            source = text[start:end]
+            if not source.strip():
+                continue
+            route = {
+                "start": start,
+                "end": end,
+                "language": lang,
+                "score": score,
+                "parser": models.PARSERS.get(lang),
+                "backend": ROUTES.get(lang, {}).get("backend"),
+                "routing_status": "explicit"
+                if score is None
+                else "tentative"
+                if score < 0.5
+                else "detected",
+                "stages": {},
+            }
+            profile["routes"].append(route)
+            yield Passage(b, index, source, route)
 
 
-def analyze(b, start, end, reading):
-    lang = reading["lang"]
-    bundle = None
-    reason = f"No registered parser for {lang}"
-    with ExitStack() as stack:
-        if lang in models.PARSERS:
-            cache = models.language_cache()
-            try:
-                bundle = stack.enter_context(cache.acquire(lang, models.parser))
-            except Exception as exc:  # noqa: BLE001 - model loaders use provider-specific exceptions
-                reason = str(exc)
-        analyze_passage(b, start, end, reading, bundle, reason)
-
-
-def analyze_passage(b, start, end, reading, bundle, reason):
-    source = b.text[start:end]
-    lang = reading["lang"]
-    route = {
-        "start": start,
-        "end": end,
-        "language": lang,
-        "score": reading["score"],
-        "parser": models.PARSERS.get(lang),
-        "backend": ROUTES.get(lang, {}).get("backend"),
-        "stages": {},
-    }
-    route["routing_status"] = (
-        "explicit"
-        if reading["score"] is None
-        else "tentative"
-        if reading["score"] < 0.5
-        else "detected"
-    )
-    b.graph.profile["routes"].append(route)
-    stages = route["stages"]
-
-    def failed(stage, exc):
-        stages[stage] = {"status": "unavailable", "reason": str(exc)}
-        b.graph.profile["status"] = "partial"
-
-    doc = None
-    if bundle is not None:
-        try:
+def parse_group(lang, group):
+    texts = [p.source for p in group]
+    if lang != "en":
+        for p in group:
+            p.route["stages"]["coreference"] = {
+                "status": "unqualified",
+                "language": lang,
+            }
+    try:
+        if lang not in models.PARSERS:
+            raise ValueError(f"No registered parser for {lang}")
+        with models.language_cache().acquire(lang, models.parser) as bundle:
             parser = bundle.parser
-            doc = parser(source)
-            if hasattr(doc, "parser_name"):
-                route["parser"] = doc.parser_name
-            stages["parser"] = {"status": "complete", "version": parser.meta["version"]}
-        except Exception as exc:  # noqa: BLE001 - preserve failures at the model boundary
-            failed("parser", exc)
+
+            def parse(items):
+                if len(items) > 1 and hasattr(parser, "pipe"):
+                    return parser.pipe(items, batch_size=len(items))
+                return map(parser, items)
+
+            for p, doc in zip(group, isolated(texts, parse), strict=True):
+                if isinstance(doc, Exception):
+                    p.fail("parser", doc)
+                else:
+                    p.doc = doc
+                    p.route["parser"] = getattr(doc, "parser_name", p.route["parser"])
+                    p.route["stages"]["parser"] = {
+                        "status": "complete",
+                        "version": parser.meta["version"],
+                    }
+            if lang == "en":
+                results = models.coreference_batch(
+                    texts, [p.doc for p in group], bundle
+                )
+                for p, result in zip(group, results, strict=True):
+                    if isinstance(result, Exception):
+                        p.fail("coreference", result)
+                    else:
+                        p.clusters = result
+                        p.route["stages"]["coreference"] = {"status": "complete"}
+    except Exception as exc:  # noqa: BLE001 - capture provider-specific failures under the active stage
+        for p in group:
+            for stage in ("parser", "coreference"):
+                if stage not in p.route["stages"]:
+                    p.fail(stage, exc)
+
+
+def relation_labels(p):
+    if p.doc is None or p.route["language"] not in {"en", "fr", "es"}:
+        frames = PROJECTIONS
     else:
-        failed("parser", reason)
-    clusters = []
-    if lang == "en" and bundle is None:
-        failed("coreference", reason)
-    elif lang == "en":
+        frames = {FRAMES[t.lemma_][0] for t in p.doc if t.lemma_ in FRAMES}
+    return tuple(
+        sorted(
+            {pred.lower() for f in frames for _, pred, _ in PROJECTIONS.get(f, [])}
+            or {"related_to"}
+        )
+    )
+
+
+def predict_sentences(group):
+    jobs = []
+    for p in group:
         try:
-            clusters = models.coreference_clusters(source, doc, bundle)
-            stages["coreference"] = {"status": "complete"}
-        except Exception as exc:  # noqa: BLE001 - preserve failures at the model boundary
-            failed("coreference", exc)
-    else:
-        stages["coreference"] = {"status": "unqualified", "language": lang}
-    relations = {p.lower() for triples in PROJECTIONS.values() for _, p, _ in triples}
+            labels = relation_labels(p)
+            p.sentences = (
+                [(s.start_char, s.text) for s in p.doc.sents]
+                if p.doc is not None
+                else [(0, p.source)]
+            )
+        except Exception as exc:  # noqa: BLE001 - a malformed parse can still use the whole-passage extractor
+            p.fail("parser", exc)
+            p.doc = None
+            p.sentences = [(0, p.source)]
+            labels = relation_labels(p)
+        p.predictions = [None] * len(p.sentences)
+        for i, (_, text) in enumerate(p.sentences):
+            jobs.append((text, labels, p, i))
+
+    def run(batch):
+        results = isolated(
+            [(text, labels) for text, labels, _, _ in batch], models.predict_many
+        )
+        for (_, _, p, i), result in zip(batch, results, strict=True):
+            p.predictions[i] = result
+
+    pending = []
+    for job in sorted(jobs, key=lambda job: len(job[0])):
+        # Long sentences may expand to multiple overlapping encoder windows.
+        if len(job[0]) > 384:
+            if pending:
+                run(pending)
+                pending = []
+            run([job])
+        else:
+            pending.append(job)
+            if len(pending) == 4:
+                run(pending)
+                pending = []
+    if pending:
+        run(pending)
+
+
+def passage_batches(passages):
+    group = []
+    characters = 0
+    for passage in passages:
+        length = len(passage.source)
+        if group and (len(group) == 8 or characters + length > MAX_PASSAGE_CHARS):
+            yield group
+            group = []
+            characters = 0
+        group.append(passage)
+        characters += length
+    if group:
+        yield group
+
+
+def extract_many(documents):
+    """Return a DocumentGraph or an exception for each (text, language) pair."""
+    results = [None] * len(documents)
+
+    def passages():
+        for index, (text, code) in enumerate(documents):
+            try:
+                if not isinstance(text, str):
+                    raise TypeError("text must be a string")
+                if code is not None and code not in LANGUAGES:
+                    raise ValueError("Unknown detector language code")
+                builder = Builder(text)
+                results[index] = builder.graph
+                yield from prepare(builder, index, code)
+            except Exception as exc:  # noqa: BLE001 - isolate document preparation failures
+                results[index] = exc
+
+    for group in passage_batches(passages()):
+        languages = defaultdict(list)
+        for p in group:
+            languages[p.route["language"]].append(p)
+        for lang, items in languages.items():
+            parse_group(lang, items)
+        predict_sentences(group)
+        for p in group:
+            try:
+                assemble(p)
+            except Exception as exc:  # noqa: BLE001 - isolate graph assembly failures
+                results[p.index] = exc
+    return results
+
+
+def extract_graph(text: str, *, language_code=None) -> DocumentGraph:
+    graph = extract_many([(text, language_code)])[0]
+    if isinstance(graph, Exception):
+        raise graph
+    return graph
+
+
+def assemble(p):
+    b, doc, clusters, route = p.builder, p.doc, p.clusters, p.route
+    lang, start = route["language"], route["start"]
     native = lang not in {"en", "fr", "es"}
     if native:
         from .native import QUALIFIED
@@ -192,29 +326,21 @@ def analyze_passage(b, start, end, reading, bundle, reason):
             else []
         )
         b.graph.profile["status"] = "partial"
-    if doc is not None and not native:
-        senses = {FRAMES[t.lemma_][0] for t in doc if t.lemma_ in FRAMES}
-        relations = {
-            p.lower() for s in senses for _, p, _ in PROJECTIONS.get(s, [])
-        } or {"related_to"}
     candidates = {}
     proposals = []
     sense_candidates = {}
-    passages = (
-        [(s.start_char, s.text) for s in doc.sents]
-        if doc is not None
-        else [(0, source)]
-    )
-    try:
-        for base, passage in passages:
-            result = models.predict(passage, relations)
+    route["stages"]["gliner"] = {"status": "complete"}
+    for (base, passage), result in zip(p.sentences, p.predictions, strict=True):
+        if isinstance(result, Exception):
+            p.fail("gliner", result)
+            continue
+        try:
             collect_predictions(
                 b, lang, start, base, passage, result, candidates, proposals
             )
             sense_candidates[base] = result.get("predicate_senses", [])
-        stages["gliner"] = {"status": "complete"}
-    except Exception as exc:  # noqa: BLE001 - preserve failures at the model boundary
-        failed("gliner", exc)
+        except Exception as exc:  # noqa: BLE001 - record malformed provider output for this passage
+            p.fail("gliner", exc)
     if doc is not None and native:
         from .native import interpret
 

@@ -130,11 +130,11 @@ def stanza_pipeline(route):
         )
 
 
-def stanza_reader(route):
+def stanza_parser(route):
     nlp = stanza_pipeline(route)
 
-    def read(text):
-        for sent in nlp(text).sentences:
+    def convert(text, doc):
+        for sent in doc.sentences:
             words = [
                 Word(
                     w.id,
@@ -151,7 +151,14 @@ def stanza_reader(route):
             ]
             yield sentence(text, words)
 
-    return read
+    return NativeParser(
+        lambda text: convert(text, nlp(text)),
+        route["revision"],
+        lambda texts: (
+            convert(text, doc)
+            for text, doc in zip(texts, nlp.bulk_process(texts), strict=True)
+        ),
+    )
 
 
 def spacy_reader(route):
@@ -165,19 +172,21 @@ def spacy_reader(route):
     )
     segment = stanza_pipeline(route["segmenter"]) if "segmenter" in route else None
 
-    def read(text):
+    def tokenize(text):
         if segment:
             tokens = [t for s in segment(text).sentences for t in s.tokens]
             spans = [(t.start_char, t.end_char) for t in tokens]
-            doc = nlp(
-                Doc(
-                    nlp.vocab,
-                    words=[text[a:z] for a, z in spans],
-                    spaces=[False] * len(spans),
-                )
+            doc = Doc(
+                nlp.vocab,
+                words=[text[a:z] for a, z in spans],
+                spaces=[False] * len(spans),
             )
         else:
-            doc = nlp(text)
+            doc, spans = text, None
+        return doc, spans
+
+    def convert(text, doc, spans):
+        if spans is None:
             spans = [(t.idx, t.idx + len(t)) for t in doc]
         for sent in doc.sents:
             words = [
@@ -194,7 +203,24 @@ def spacy_reader(route):
             ]
             yield sentence(text, words)
 
-    return read
+    def read(text):
+        value, spans = tokenize(text)
+        return convert(text, nlp(value), spans)
+
+    def bulk(texts):
+        values, offsets = zip(*(tokenize(text) for text in texts))
+        docs = nlp.pipe(values, batch_size=len(texts))
+        return (
+            convert(text, doc, spans)
+            for text, doc, spans in zip(texts, docs, offsets, strict=True)
+        )
+
+    version = route.get("revision")
+    if route["backend"] == "spacy_package":
+        from importlib.metadata import version as package_version
+
+        version = package_version(route["model"])
+    return NativeParser(read, version, bulk)
 
 
 def cantonese_reader(route):
@@ -228,12 +254,20 @@ def cantonese_reader(route):
 
 
 class NativeParser:
-    def __init__(self, reader, model):
+    def __init__(self, reader, model, bulk=None):
+        self.bulk = bulk
         self.read = reader
         self.meta = {"version": model}
 
     def __call__(self, text):
         return SimpleNamespace(sents=list(self.read(text)))
+
+    def pipe(self, texts, *, batch_size):
+        if self.bulk is None:
+            return map(self, texts)
+        return (
+            SimpleNamespace(sents=list(sentences)) for sentences in self.bulk(texts)
+        )
 
 
 class ChineseParser:
@@ -267,6 +301,10 @@ def load_parser(lang):
     if lang == "zh":
         return ChineseParser(route)
     backend = route["backend"]
+    if backend == "stanza":
+        return stanza_parser(route)
+    if backend in {"spacy", "spacy_package"}:
+        return spacy_reader(route)
     if backend == "udpipe":
         reader = udpipe_reader(asset_path(route["model"]))
     elif backend == "camel":
@@ -281,17 +319,10 @@ def load_parser(lang):
         from .malay import reader as malay_reader
 
         reader = malay_reader(route)
+    elif backend == "cantonese":
+        reader = cantonese_reader(route)
     else:
-        reader = {
-            "spacy_package": spacy_reader,
-            "stanza": stanza_reader,
-            "spacy": spacy_reader,
-            "cantonese": cantonese_reader,
-        }[backend](route)
-    if backend == "spacy_package":
-        from importlib.metadata import version
-
-        return NativeParser(reader, version(route["model"]))
+        raise ValueError(f"Unknown parser backend {backend}")
     return NativeParser(reader, route["revision"])
 
 

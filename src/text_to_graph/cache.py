@@ -1,4 +1,4 @@
-"""A per-process LRU of language bundles, pinned for the duration of each passage."""
+"""A per-process LRU of language bundles, leased during parsing and coreference."""
 
 import gc
 import os
