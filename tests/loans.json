@@ -1,0 +1,186 @@
+{
+  "de": [
+    [
+      "Anna verleiht ein Buch an Peter.",
+      "Anna",
+      "Peter",
+      "Buch",
+      "positive"
+    ],
+    [
+      "Peter verleiht ein Buch an Anna.",
+      "Peter",
+      "Anna",
+      "Buch",
+      "positive"
+    ],
+    [
+      "Anna verleiht kein Buch an Peter.",
+      "Anna",
+      "Peter",
+      "Buch",
+      "negative"
+    ]
+  ],
+  "id": [
+    [
+      "Ani meminjamkan buku kepada Budi.",
+      "Ani",
+      "Budi",
+      "buku",
+      "positive"
+    ],
+    [
+      "Budi meminjamkan buku kepada Ani.",
+      "Budi",
+      "Ani",
+      "buku",
+      "positive"
+    ],
+    [
+      "Ani tidak meminjamkan buku kepada Budi.",
+      "Ani",
+      "Budi",
+      "buku",
+      "negative"
+    ]
+  ],
+  "it": [
+    [
+      "Anna presta un libro a Paolo.",
+      "Anna",
+      "Paolo",
+      "libro",
+      "positive"
+    ],
+    [
+      "Paolo presta un libro a Anna.",
+      "Paolo",
+      "Anna",
+      "libro",
+      "positive"
+    ],
+    [
+      "Anna non presta un libro a Paolo.",
+      "Anna",
+      "Paolo",
+      "libro",
+      "negative"
+    ]
+  ],
+  "pt": [
+    [
+      "Ana empresta um livro a Paulo.",
+      "Ana",
+      "Paulo",
+      "livro",
+      "positive"
+    ],
+    [
+      "Paulo empresta um livro a Ana.",
+      "Paulo",
+      "Ana",
+      "livro",
+      "positive"
+    ],
+    [
+      "Ana não empresta um livro a Paulo.",
+      "Ana",
+      "Paulo",
+      "livro",
+      "negative"
+    ]
+  ],
+  "da": [
+    [
+      "Anna låner en bog til Peter.",
+      "Anna",
+      "Peter",
+      "bog",
+      "positive"
+    ],
+    [
+      "Peter låner en bog til Anna.",
+      "Peter",
+      "Anna",
+      "bog",
+      "positive"
+    ],
+    [
+      "Anna låner ikke en bog til Peter.",
+      "Anna",
+      "Peter",
+      "bog",
+      "negative"
+    ]
+  ],
+  "ru": [
+    [
+      "Анна одолжила Ивану книгу.",
+      "Анна",
+      "Ивану",
+      "книгу",
+      "positive"
+    ],
+    [
+      "Иван одолжил Анне книгу.",
+      "Иван",
+      "Анне",
+      "книгу",
+      "positive"
+    ],
+    [
+      "Анна не одолжила Ивану книгу.",
+      "Анна",
+      "Ивану",
+      "книгу",
+      "negative"
+    ]
+  ],
+  "ar": [
+    [
+      "أعارت سارة كتابًا إلى محمد.",
+      "سارة",
+      "محمد",
+      "كتابًا",
+      "positive"
+    ],
+    [
+      "أعار محمد كتابًا إلى سارة.",
+      "محمد",
+      "سارة",
+      "كتابًا",
+      "positive"
+    ],
+    [
+      "لم تُعِر سارة كتابًا إلى محمد.",
+      "سارة",
+      "محمد",
+      "كتابًا",
+      "negative"
+    ]
+  ],
+  "ms": [
+    [
+      "Ali meminjamkan buku kepada Siti.",
+      "Ali",
+      "Siti",
+      "buku",
+      "positive"
+    ],
+    [
+      "Siti meminjamkan buku kepada Ali.",
+      "Siti",
+      "Ali",
+      "buku",
+      "positive"
+    ],
+    [
+      "Ali tidak meminjamkan buku kepada Siti.",
+      "Ali",
+      "Siti",
+      "buku",
+      "negative"
+    ]
+  ]
+}

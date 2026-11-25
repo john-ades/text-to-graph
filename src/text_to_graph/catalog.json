@@ -1,0 +1,2333 @@
+{
+ "assets": {
+  "am/POS_tag_module/tagClassifier2.h5": {
+   "digest": "git:31d708e5a4d2ca6fe968542105a7043912b86cd4",
+   "size": 4786736,
+   "url": "https://raw.githubusercontent.com/mizgithub/Amharic_Dependency_ParserApp/090bf70e0511390923b02f7ea975bc2ed2ef8fce/POS_tag_module/tagClassifier2.h5"
+  },
+  "am/dependencyparser_module/TBNADP.h5": {
+   "digest": "git:8e3a7d4a426dd650c5c0407e4a6503c428d59e7f",
+   "size": 7307920,
+   "url": "https://raw.githubusercontent.com/mizgithub/Amharic_Dependency_ParserApp/090bf70e0511390923b02f7ea975bc2ed2ef8fce/dependencyparser_module/TBNADP.h5"
+  },
+  "am/dependencyparser_module/TBNADPrel.h5": {
+   "digest": "git:7427b5acf84c5bf02bae8cfe48631e596781b4aa",
+   "size": 12757912,
+   "url": "https://raw.githubusercontent.com/mizgithub/Amharic_Dependency_ParserApp/090bf70e0511390923b02f7ea975bc2ed2ef8fce/dependencyparser_module/TBNADPrel.h5"
+  },
+  "am/dependencyparser_module/rel2index.json": {
+   "digest": "git:1cad25df0448ed8df204db068a094dafac34797a",
+   "size": 463,
+   "url": "https://raw.githubusercontent.com/mizgithub/Amharic_Dependency_ParserApp/090bf70e0511390923b02f7ea975bc2ed2ef8fce/dependencyparser_module/rel2index.json"
+  },
+  "am/dependencyparser_module/tag2index.json": {
+   "digest": "git:3c54efe6d9e75e5eae1a25d200ce6051df2fff81",
+   "size": 301,
+   "url": "https://raw.githubusercontent.com/mizgithub/Amharic_Dependency_ParserApp/090bf70e0511390923b02f7ea975bc2ed2ef8fce/dependencyparser_module/tag2index.json"
+  },
+  "am/dependencyparser_module/word2index.json": {
+   "digest": "git:c6fb17d42478394dfc7111a90703851f997efb3e",
+   "size": 42004,
+   "url": "https://raw.githubusercontent.com/mizgithub/Amharic_Dependency_ParserApp/090bf70e0511390923b02f7ea975bc2ed2ef8fce/dependencyparser_module/word2index.json"
+  },
+  "arz/bert/config.json": {
+   "digest": "git:84c2b3eef4b5af75089bb2bdd927c9dfcc61001b",
+   "size": 468,
+   "url": "https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-mix/resolve/9be352797bdf28a9ae21e2ae582aaaca7abdb22d/config.json"
+  },
+  "arz/bert/pytorch_model.bin": {
+   "digest": "d234e4fe0193e74036b1db72ba9b41a2e4921d8cf0c3c421d1f6a6d8816af729",
+   "size": 438873130,
+   "url": "https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-mix/resolve/9be352797bdf28a9ae21e2ae582aaaca7abdb22d/pytorch_model.bin"
+  },
+  "arz/bert/special_tokens_map.json": {
+   "digest": "git:e7b0375001f109a6b8873d756ad4f7bbb15fbaa5",
+   "size": 112,
+   "url": "https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-mix/resolve/9be352797bdf28a9ae21e2ae582aaaca7abdb22d/special_tokens_map.json"
+  },
+  "arz/bert/tokenizer_config.json": {
+   "digest": "git:f02053679c1de3ef3c8351e660a0622df03dc488",
+   "size": 86,
+   "url": "https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-mix/resolve/9be352797bdf28a9ae21e2ae582aaaca7abdb22d/tokenizer_config.json"
+  },
+  "arz/bert/vocab.txt": {
+   "digest": "git:3ec277e809dc7e4e988d8e393708deebbc4da0ee",
+   "size": 304561,
+   "url": "https://huggingface.co/CAMeL-Lab/bert-base-arabic-camelbert-mix/resolve/9be352797bdf28a9ae21e2ae582aaaca7abdb22d/vocab.txt"
+  },
+  "arz/parser/EGY.ARZTB.CAMeLBERT-MIX.model": {
+   "digest": "9c22dde4fc8e653110982d74b001db5fbc9027cb7428b6298fdc8368941a1237",
+   "size": 445282506,
+   "url": "https://huggingface.co/CAMeL-Lab/camelparser-dialects-EGY/resolve/feb0a316809f9ad165ebafded5d284611f188605/EGY.ARZTB.CAMeLBERT-MIX.model"
+  },
+  "detector/lid.176.ftz": {
+   "digest": "8f3472cfe8738a7b6099e8e999c3cbfae0dcd15696aac7d7738a8039db603e83",
+   "size": 938013,
+   "url": "https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz"
+  },
+  "hf/coref/config.json": {
+   "digest": "git:9eee6a2fc9c6cb8fd7102c25db0963b1b2f04c02",
+   "size": 819,
+   "url": "https://huggingface.co/biu-nlp/f-coref/resolve/e91dfff12879495d882ba9460d0c5d5dd44ade59/config.json"
+  },
+  "hf/coref/merges.txt": {
+   "digest": "git:6636bda4a1fd7a63653dffb22683b8162c8de956",
+   "size": 456356,
+   "url": "https://huggingface.co/biu-nlp/f-coref/resolve/e91dfff12879495d882ba9460d0c5d5dd44ade59/merges.txt"
+  },
+  "hf/coref/pytorch_model.bin": {
+   "digest": "30ea6efe2bce49a857fe8aba41dcfe28b4147f77e3dec9f14100950bf4de1aa5",
+   "size": 362162101,
+   "url": "https://huggingface.co/biu-nlp/f-coref/resolve/e91dfff12879495d882ba9460d0c5d5dd44ade59/pytorch_model.bin"
+  },
+  "hf/coref/special_tokens_map.json": {
+   "digest": "git:2ea7ad0e45a9d1d1591782ba7e29a703d0758831",
+   "size": 239,
+   "url": "https://huggingface.co/biu-nlp/f-coref/resolve/e91dfff12879495d882ba9460d0c5d5dd44ade59/special_tokens_map.json"
+  },
+  "hf/coref/tokenizer.json": {
+   "digest": "git:0eb842810c9113ab1348ce75f2ebaf4df4ffbfb7",
+   "size": 1355880,
+   "url": "https://huggingface.co/biu-nlp/f-coref/resolve/e91dfff12879495d882ba9460d0c5d5dd44ade59/tokenizer.json"
+  },
+  "hf/coref/tokenizer_config.json": {
+   "digest": "git:64f08e1ff2d0986abc3f63111914486bf0957729",
+   "size": 393,
+   "url": "https://huggingface.co/biu-nlp/f-coref/resolve/e91dfff12879495d882ba9460d0c5d5dd44ade59/tokenizer_config.json"
+  },
+  "hf/coref/vocab.json": {
+   "digest": "git:4ebe4bb3f3114daf2e4cc349f24873a1175a35d7",
+   "size": 798293,
+   "url": "https://huggingface.co/biu-nlp/f-coref/resolve/e91dfff12879495d882ba9460d0c5d5dd44ade59/vocab.json"
+  },
+  "hf/gliner/config.json": {
+   "digest": "git:c4c540f52d2e48b5ca2582c6fc23f72b5ae9c79c",
+   "size": 3151,
+   "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/resolve/2ca71aafb3446d9014e1c55c7ff51c9bc7209c47/config.json"
+  },
+  "hf/gliner/encoder_config/config.json": {
+   "digest": "git:0bb5e495baad2e7fdc35500f0072d5f2d957ed5a",
+   "size": 857,
+   "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/resolve/2ca71aafb3446d9014e1c55c7ff51c9bc7209c47/encoder_config/config.json"
+  },
+  "hf/gliner/model.safetensors": {
+   "digest": "c1ff4ec0bc00031c15530b8f3c33d3677f27949e6a0cb52e1247a6224b6c5395",
+   "size": 1149461028,
+   "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/resolve/2ca71aafb3446d9014e1c55c7ff51c9bc7209c47/model.safetensors"
+  },
+  "hf/gliner/tokenizer.json": {
+   "digest": "c62446df87ae18ec98b133f8f84fc449a07cc89bbf8ef192a4cb5f9c53777a7a",
+   "size": 16035853,
+   "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/resolve/2ca71aafb3446d9014e1c55c7ff51c9bc7209c47/tokenizer.json"
+  },
+  "hf/gliner/tokenizer_config.json": {
+   "digest": "git:5efd586306801b08ca13390b0619a94c943046e4",
+   "size": 645,
+   "url": "https://huggingface.co/fastino/gliner2.5-multi-v1/resolve/2ca71aafb3446d9014e1c55c7ff51c9bc7209c47/tokenizer_config.json"
+  },
+  "hf/ms/config.json": {
+   "digest": "git:e827dc2992a0efd4c00c1ce5903936023b88b6bd",
+   "size": 2195,
+   "url": "https://huggingface.co/mesolitica/finetune-dependency-t5-tiny-standard-bahasa-cased/resolve/18bfb8e3d9076d5614f75af3160643adc20b9c7f/config.json"
+  },
+  "hf/ms/pytorch_model.bin": {
+   "digest": "d17f9d5a69a87be0ec3fa69e4087981707292c1876691eb72601761dfbe8bd30",
+   "size": 143223356,
+   "url": "https://huggingface.co/mesolitica/finetune-dependency-t5-tiny-standard-bahasa-cased/resolve/18bfb8e3d9076d5614f75af3160643adc20b9c7f/pytorch_model.bin"
+  },
+  "hf/ms/special_tokens_map.json": {
+   "digest": "git:2c19eb6e3b583f52d34b903b5978d3d30b6b7682",
+   "size": 2201,
+   "url": "https://huggingface.co/mesolitica/finetune-dependency-t5-tiny-standard-bahasa-cased/resolve/18bfb8e3d9076d5614f75af3160643adc20b9c7f/special_tokens_map.json"
+  },
+  "hf/ms/spiece.model": {
+   "digest": "26de51154cccc9db6e65e5d466bdb0b1fff9fab1d80f4689711de943448addd6",
+   "size": 803030,
+   "url": "https://huggingface.co/mesolitica/finetune-dependency-t5-tiny-standard-bahasa-cased/resolve/18bfb8e3d9076d5614f75af3160643adc20b9c7f/spiece.model"
+  },
+  "hf/ms/tokenizer_config.json": {
+   "digest": "git:6da1e33e86e19cfb4ec946e3f70639553dcae0b8",
+   "size": 2552,
+   "url": "https://huggingface.co/mesolitica/finetune-dependency-t5-tiny-standard-bahasa-cased/resolve/18bfb8e3d9076d5614f75af3160643adc20b9c7f/tokenizer_config.json"
+  },
+  "hf/muril/config.json": {
+   "digest": "git:99e2e8f9f976ae00e3e1a1d8d59ed1a69166f08a",
+   "size": 406,
+   "url": "https://huggingface.co/google/muril-large-cased/resolve/ace319f0d17524297957e249aff028b0b7357ab5/config.json"
+  },
+  "hf/muril/pytorch_model.bin": {
+   "digest": "1a3bb993f09d053d285b7f301ddeef32934db4038593c7fc9eaa02c6057b27d0",
+   "size": 2028800502,
+   "url": "https://huggingface.co/google/muril-large-cased/resolve/ace319f0d17524297957e249aff028b0b7357ab5/pytorch_model.bin"
+  },
+  "hf/muril/special_tokens_map.json": {
+   "digest": "git:e7b0375001f109a6b8873d756ad4f7bbb15fbaa5",
+   "size": 112,
+   "url": "https://huggingface.co/google/muril-large-cased/resolve/ace319f0d17524297957e249aff028b0b7357ab5/special_tokens_map.json"
+  },
+  "hf/muril/tokenizer_config.json": {
+   "digest": "git:086cf0319cd468f79625887c4009348c788fb6e6",
+   "size": 181,
+   "url": "https://huggingface.co/google/muril-large-cased/resolve/ace319f0d17524297957e249aff028b0b7357ab5/tokenizer_config.json"
+  },
+  "hf/muril/vocab.txt": {
+   "digest": "git:82598648d51338150187843ae3992243ffe68de5",
+   "size": 3162999,
+   "url": "https://huggingface.co/google/muril-large-cased/resolve/ace319f0d17524297957e249aff028b0b7357ab5/vocab.txt"
+  },
+  "hf/yue/added_tokens.json": {
+   "digest": "git:fa2182ee6b49112d703348d54071627d1de17f10",
+   "size": 8003,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/added_tokens.json"
+  },
+  "hf/yue/config.json": {
+   "digest": "git:2f217dc48963b10547e58f19e70ddb2886bca618",
+   "size": 13013,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/config.json"
+  },
+  "hf/yue/pytorch_model.bin": {
+   "digest": "ecfaa91446c8c82082a689bd8e5f087569adb91467d31264d5149e7c4a868ee6",
+   "size": 408982950,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/pytorch_model.bin"
+  },
+  "hf/yue/special_tokens_map.json": {
+   "digest": "git:9bbecc17cabbcbd3112c14d6982b51403b264bfa",
+   "size": 695,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/special_tokens_map.json"
+  },
+  "hf/yue/tokenizer.json": {
+   "digest": "git:d72d68ad99715cc416beab5ba872ab389e5621ee",
+   "size": 528625,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/tokenizer.json"
+  },
+  "hf/yue/tokenizer_config.json": {
+   "digest": "git:c2108d5379891e16519fc7f5d6908502df287f87",
+   "size": 85922,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/tokenizer_config.json"
+  },
+  "hf/yue/ud.py": {
+   "digest": "git:488b149b34d6333da987110076702c50564f4ffd",
+   "size": 3767,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/ud.py"
+  },
+  "hf/yue/vocab.txt": {
+   "digest": "git:ca4f9781030019ab9b253c6dcb8c7878b6dc87a5",
+   "size": 109540,
+   "url": "https://huggingface.co/KoichiYasuoka/bert-base-cantonese-ud-goeswith/resolve/5ee6d0ce162ddfd931e59b9f384d1285ee3ab779/vocab.txt"
+  },
+  "spacy/calamancy/config.cfg": {
+   "digest": "git:5c3017e7c7ada4951d30cc21b4dd1682839de5fd",
+   "size": 4842,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/config.cfg"
+  },
+  "spacy/calamancy/meta.json": {
+   "digest": "git:75d4c8fcf9b0b67efbc692c9fe8816f25c4cb15e",
+   "size": 48826,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/meta.json"
+  },
+  "spacy/calamancy/morphologizer/cfg": {
+   "digest": "git:ad3c41923028d96f93365c6850bc886abf7ce811",
+   "size": 51773,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/morphologizer/cfg"
+  },
+  "spacy/calamancy/morphologizer/model": {
+   "digest": "89756f64e3ca7ddfd649e6e1e1c1b1c3fa3805f7b8224ccc4e6d1451e8c366bb",
+   "size": 448658,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/morphologizer/model"
+  },
+  "spacy/calamancy/ner/cfg": {
+   "digest": "git:6cd11cf7e67d8f2515a43feed2b679ec362c66e8",
+   "size": 221,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/ner/cfg"
+  },
+  "spacy/calamancy/ner/model": {
+   "digest": "79a813afca77f67e919a221db631d9d5136b0b1f94c272d6b83ade0f8345b02b",
+   "size": 34502066,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/ner/model"
+  },
+  "spacy/calamancy/ner/moves": {
+   "digest": "git:fcfb54f4017c11efff06b49a6757c4a898ee1186",
+   "size": 207,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/ner/moves"
+  },
+  "spacy/calamancy/parser/cfg": {
+   "digest": "git:ff48dcc6ba854b472b0f2554ec6d59bbff952a3d",
+   "size": 222,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/parser/cfg"
+  },
+  "spacy/calamancy/parser/model": {
+   "digest": "448352b36efaa5e4b3654b56e83adeac1c9d84b942f67d467f47468de4345428",
+   "size": 1753113,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/parser/model"
+  },
+  "spacy/calamancy/parser/moves": {
+   "digest": "git:93927fd52e4032e7eb80b5a2f01b1f02fa2dabbd",
+   "size": 986,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/parser/moves"
+  },
+  "spacy/calamancy/tagger/cfg": {
+   "digest": "git:863e27baebe8e920d107bfb916f6978d7a771351",
+   "size": 25461,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/tagger/cfg"
+  },
+  "spacy/calamancy/tagger/model": {
+   "digest": "27690891aa6f8676c6b736b98b26ce91d62ba5cb96148da829f139034d8f74d0",
+   "size": 651174,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/tagger/model"
+  },
+  "spacy/calamancy/tok2vec/cfg": {
+   "digest": "git:0e0dcd235c4973becf25f38eb4e5bb26e154c86a",
+   "size": 4,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/tok2vec/cfg"
+  },
+  "spacy/calamancy/tok2vec/model": {
+   "digest": "f2dd533445d5a7f76f2aa76a410fdbcf16c134ffd69bd5467334b8a8f1b18192",
+   "size": 34331606,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/tok2vec/model"
+  },
+  "spacy/calamancy/tokenizer": {
+   "digest": "git:230913dfb978514a258c6027285ed073c341ec40",
+   "size": 38247,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/tokenizer"
+  },
+  "spacy/calamancy/trainable_lemmatizer/cfg": {
+   "digest": "git:68af33ec551a0abad365c670207779d931af024a",
+   "size": 15770,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/trainable_lemmatizer/cfg"
+  },
+  "spacy/calamancy/trainable_lemmatizer/model": {
+   "digest": "385d0bcf8a03cb7b2e16b5edcca3c5d9b463b2094bd1867f0110b26fccf7a41c",
+   "size": 1681230,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/trainable_lemmatizer/model"
+  },
+  "spacy/calamancy/trainable_lemmatizer/trees": {
+   "digest": "4c660f5a08b868d35363881b8c4f3d5829b074ad8fce8135da26f2b89b554caa",
+   "size": 835809,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/trainable_lemmatizer/trees"
+  },
+  "spacy/calamancy/vocab/key2row": {
+   "digest": "git:5416677bc7dab0c8bec3f5bf44d7d28b4ff73b13",
+   "size": 1,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/vocab/key2row"
+  },
+  "spacy/calamancy/vocab/lookups.bin": {
+   "digest": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+   "size": 1,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/vocab/lookups.bin"
+  },
+  "spacy/calamancy/vocab/strings.json": {
+   "digest": "git:99a294c9101cdf3593632ccf425c93b2c12d972d",
+   "size": 1095901,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/vocab/strings.json"
+  },
+  "spacy/calamancy/vocab/vectors": {
+   "digest": "d82e78dca567316ae876bc463058d58f74677c01694aaac0109f19c6572203bb",
+   "size": 160000128,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/vocab/vectors"
+  },
+  "spacy/calamancy/vocab/vectors.cfg": {
+   "digest": "git:2228952dd4ade6281ff16a3abfd63b6e9fdd4614",
+   "size": 128,
+   "url": "https://huggingface.co/ljvmiranda921/tl_calamancy_md/resolve/4960655b2d63fd9f306d60d554a95d7bfa5dd25d/vocab/vectors.cfg"
+  },
+  "spacy/my/model/config.cfg": {
+   "digest": "git:afc037174213f59c76f5fbae3aaa8afc7e0ea8bc",
+   "size": 3463,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/config.cfg"
+  },
+  "spacy/my/model/meta.json": {
+   "digest": "git:8cf6ff70b134ea18263a862459ac8bd388035e4b",
+   "size": 3093,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/meta.json"
+  },
+  "spacy/my/model/morphologizer/cfg": {
+   "digest": "git:32b8ae2b3c995bd5b5023ec45d0df5a68a65b73c",
+   "size": 709,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/morphologizer/cfg"
+  },
+  "spacy/my/model/morphologizer/model": {
+   "digest": "git:7405db19b4f97c4dc924fcdb20261718d30fe535",
+   "size": 7657,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/morphologizer/model"
+  },
+  "spacy/my/model/parser/cfg": {
+   "digest": "git:c6ba38f0b78f743b00ebe930cfdeabd98596fef2",
+   "size": 237,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/parser/cfg"
+  },
+  "spacy/my/model/parser/model": {
+   "digest": "bb19e47f565e5207261286de4b1c410c5e7e05399cc1e255994dec8d1baf8c75",
+   "size": 1137521,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/parser/model"
+  },
+  "spacy/my/model/parser/moves": {
+   "digest": "git:bdc36ad3f2d9b2551696078bf9431bf494f1ed6c",
+   "size": 360,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/parser/moves"
+  },
+  "spacy/my/model/tok2vec/cfg": {
+   "digest": "git:9e26dfeeb6e641a33dae4961196235bdb965b21b",
+   "size": 2,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/tok2vec/cfg"
+  },
+  "spacy/my/model/tok2vec/model": {
+   "digest": "a9d79fe4e6d8c0cf66afa9212317d99f8e922f0346b45fd42ee74749dd225cf1",
+   "size": 43866168,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/tok2vec/model"
+  },
+  "spacy/my/model/tokenizer": {
+   "digest": "git:cf1ad879200d3c5506236b5010d9349244d667e0",
+   "size": 37695,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/tokenizer"
+  },
+  "spacy/my/model/vocab/key2row": {
+   "digest": "b3384c5e5abe396bde867e24029db2c3c931ecd685d5301a372ca3e3ab6c6ed3",
+   "size": 4540989,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/vocab/key2row"
+  },
+  "spacy/my/model/vocab/lookups.bin": {
+   "digest": "76be8b528d0075f7aae98d6fa57a6d3c83ae480a8469e668d7b0af968995ac71",
+   "size": 1,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/vocab/lookups.bin"
+  },
+  "spacy/my/model/vocab/strings.json": {
+   "digest": "9780c13e28f2cb314ccdffe7b7eb0af697dc03c0f360bfee4728470550d8e7fc",
+   "size": 13875167,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/vocab/strings.json"
+  },
+  "spacy/my/model/vocab/vectors": {
+   "digest": "37104220a2c2dc5857c895747e7e269fea8571c353ac1c616db27846d0ec0413",
+   "size": 240000128,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/vocab/vectors"
+  },
+  "spacy/my/model/vocab/vectors.cfg": {
+   "digest": "git:bc1fff6a4fbb3d51ded2b4e0bff3fb31a4a247c0",
+   "size": 25,
+   "url": "https://huggingface.co/conradcompagna/burmese-pos-dependency-spacy/resolve/e9b5bcc47ddb606a50df9ef487b3ccef16ecce99/model/vocab/vectors.cfg"
+  },
+  "stanza/ar/models/depparse/padt_nocharlm.pt": {
+   "digest": "20b0aed20cba66485c3c4a2703708ff25199cbe006338cd22ef5fe909b85cee1",
+   "size": 97779315,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ar/resolve/97b384fe848a724e034783da6feb3f313019d4ab/models/depparse/padt_nocharlm.pt"
+  },
+  "stanza/ar/models/lemma/padt_nocharlm.pt": {
+   "digest": "7a8ca1fd12298a098047904b36bae7d29502424c70a0169c07f952d43a210478",
+   "size": 2303074,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ar/resolve/97b384fe848a724e034783da6feb3f313019d4ab/models/lemma/padt_nocharlm.pt"
+  },
+  "stanza/ar/models/mwt/padt.pt": {
+   "digest": "b7fa9b441570a40d89fcef75676670376f3e436e892b4e9dbf72c039289057df",
+   "size": 1108961,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ar/resolve/97b384fe848a724e034783da6feb3f313019d4ab/models/mwt/padt.pt"
+  },
+  "stanza/ar/models/pos/padt_nocharlm.pt": {
+   "digest": "e9702d189c8a2cc70928766f3a7dce3cd9f554b84d198cd3bc818c8d8c37cf9e",
+   "size": 19798059,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ar/resolve/97b384fe848a724e034783da6feb3f313019d4ab/models/pos/padt_nocharlm.pt"
+  },
+  "stanza/ar/models/pretrain/conll17.pt": {
+   "digest": "dbca2229d1bc6ef4f057fd6af69d222a666c52e93c473ead147bdfcf898645b9",
+   "size": 107597542,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ar/resolve/97b384fe848a724e034783da6feb3f313019d4ab/models/pretrain/conll17.pt"
+  },
+  "stanza/ar/models/tokenize/padt_nocharlm.pt": {
+   "digest": "98dead66010d532edbd265305135082233f6bc96f468ccc970b767583d2a73fd",
+   "size": 635305,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ar/resolve/97b384fe848a724e034783da6feb3f313019d4ab/models/tokenize/padt_nocharlm.pt"
+  },
+  "stanza/as/models/depparse/aiw_nocharlm.pt": {
+   "digest": "d443e469623315da9143accad00b0fa47d5e6c33cdcee164f73d63c0783c01d2",
+   "size": 90928792,
+   "url": "https://huggingface.co/stanfordnlp/stanza-as/resolve/9c2e5b615f3780169dbb3e935d879afc5ee5c93c/models/depparse/aiw_nocharlm.pt"
+  },
+  "stanza/as/models/lemma/aiw_nocharlm.pt": {
+   "digest": "b7512bfb628ddf72a3a6fa5e8d75f1e196d9989dc977319977c5f7215117f54e",
+   "size": 1943605,
+   "url": "https://huggingface.co/stanfordnlp/stanza-as/resolve/9c2e5b615f3780169dbb3e935d879afc5ee5c93c/models/lemma/aiw_nocharlm.pt"
+  },
+  "stanza/as/models/pos/aiw_nocharlm.pt": {
+   "digest": "f0fa9f381e5d449b032c027c3580b39eedb96e5eb63798558757ce63abfa86bb",
+   "size": 16819399,
+   "url": "https://huggingface.co/stanfordnlp/stanza-as/resolve/9c2e5b615f3780169dbb3e935d879afc5ee5c93c/models/pos/aiw_nocharlm.pt"
+  },
+  "stanza/as/models/pretrain/fasttext157.pt": {
+   "digest": "98d69864e96ad1e751f3835330f047c43bdbca5b9952d120cb79bc7c20ddd23d",
+   "size": 185377402,
+   "url": "https://huggingface.co/stanfordnlp/stanza-as/resolve/9c2e5b615f3780169dbb3e935d879afc5ee5c93c/models/pretrain/fasttext157.pt"
+  },
+  "stanza/as/models/tokenize/aiw_nocharlm.pt": {
+   "digest": "7bc6f0e87a983f1e06fd274125d354632a14282459472cdb9c9a84165ed9a241",
+   "size": 626496,
+   "url": "https://huggingface.co/stanfordnlp/stanza-as/resolve/9c2e5b615f3780169dbb3e935d879afc5ee5c93c/models/tokenize/aiw_nocharlm.pt"
+  },
+  "stanza/az/models/depparse/native.pt": {
+   "digest": "dc20069291ddf43d100ed2ced70d0f34aa18415800b71e38b77e5f64ab9668e0",
+   "size": 104266890,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.2/az_tuecl_nocharlm_parser.pt"
+  },
+  "stanza/az/models/lemma/native.pt": {
+   "digest": "ffb8b3d7db4d1d6383a5166bcdcf1e6e22e3373de377b21941c7913b7d4f659d",
+   "size": 2803109,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.2/az_tuecl_nocharlm_lemmatizer.pt"
+  },
+  "stanza/az/models/pos/native.pt": {
+   "digest": "ad98a18d86c61a6efa7ee66f6948d22a303b65a29f936a12919cdf37608524ea",
+   "size": 19856096,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.2/az_tuecl_nocharlm_tagger.pt"
+  },
+  "stanza/az/models/pretrain/native.pt.0": {
+   "digest": "74b3b0b53f129395f614a999bc9931d2228ede234b75cb1a45cfd14a22c58253",
+   "size": 1992294400,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.2/az_tuecl.pretrain.pt.part00"
+  },
+  "stanza/az/models/pretrain/native.pt.1": {
+   "digest": "561bc992380fec457b6259fe02b0d4f265b168036fe27375c38834d1bfcd4f22",
+   "size": 469361702,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.2/az_tuecl.pretrain.pt.part01"
+  },
+  "stanza/az/models/tokenize/native.pt": {
+   "digest": "6565096828d30cfab1e41712b86bdba65ce0b615650bbde7d103e642c47466a5",
+   "size": 630715,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.2/az_tuecl_nocharlm_tokenizer.pt"
+  },
+  "stanza/ba/models/depparse/native.pt": {
+   "digest": "6a6332eaade3152f89bdf73d88828f0c289dfadca964304f54ecf1fa2757e1f1",
+   "size": 105587477,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.4/ba_tud_nocharlm_parser.pt"
+  },
+  "stanza/ba/models/lemma/native.pt": {
+   "digest": "86e5646a82a524e199be2f04f94b21142516a8c1e527311bce5bd9c13dc0c559",
+   "size": 2929834,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.4/ba_tud_nocharlm_lemmatizer.pt"
+  },
+  "stanza/ba/models/pos/native.pt": {
+   "digest": "a95b70843568ff6a782e5752c9be58eb6f2960f9f4246d23a1e144f34abd9a29",
+   "size": 19791504,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.4/ba_tud_nocharlm_tagger.pt"
+  },
+  "stanza/ba/models/pretrain/native.pt": {
+   "digest": "cd99c5d93c727c03a18904a4cad1f179c8799ef837bac9f7f164eaef633704b6",
+   "size": 957414375,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.4/ba_tud.pretrain.pt.part00"
+  },
+  "stanza/ba/models/tokenize/native.pt": {
+   "digest": "fd061f7e212db8b6a8ed14ce0b11822a1d8980f4a340d059a15b6adebfaea572",
+   "size": 639812,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.4/ba_tud_nocharlm_tokenizer.pt"
+  },
+  "stanza/bxr/models/depparse/bdt_nocharlm.pt": {
+   "digest": "27378340b5b3be4aa832180b54ef58b4931486a7b099062632781c08842e202b",
+   "size": 94263050,
+   "url": "https://huggingface.co/stanfordnlp/stanza-bxr/resolve/85befbe336e71a4c7f007539318d3a3c08bde2a8/models/depparse/bdt_nocharlm.pt"
+  },
+  "stanza/bxr/models/lemma/bdt_nocharlm.pt": {
+   "digest": "388dfab818bfb21ce7292de8d0ddd27e5b2166b4a6bc0f335850a9d19ef83b95",
+   "size": 2013942,
+   "url": "https://huggingface.co/stanfordnlp/stanza-bxr/resolve/85befbe336e71a4c7f007539318d3a3c08bde2a8/models/lemma/bdt_nocharlm.pt"
+  },
+  "stanza/bxr/models/pos/bdt_nocharlm.pt": {
+   "digest": "7379225626e94a07f37b09b5b7bd38d3ef1331d5288274d235078daae14bfd8c",
+   "size": 17288031,
+   "url": "https://huggingface.co/stanfordnlp/stanza-bxr/resolve/85befbe336e71a4c7f007539318d3a3c08bde2a8/models/pos/bdt_nocharlm.pt"
+  },
+  "stanza/bxr/models/pretrain/fasttextwiki.pt": {
+   "digest": "7e8c5a9f0f9d13e087d939d29b5b007b576a51f484ca01bbc83e305f20bff4a9",
+   "size": 15936124,
+   "url": "https://huggingface.co/stanfordnlp/stanza-bxr/resolve/85befbe336e71a4c7f007539318d3a3c08bde2a8/models/pretrain/fasttextwiki.pt"
+  },
+  "stanza/bxr/models/tokenize/bdt_nocharlm.pt": {
+   "digest": "e21c5d7dfe0b2f5f698a78e90449412260bb713a21e54a1d8a2bd2960fa2e3fc",
+   "size": 630257,
+   "url": "https://huggingface.co/stanfordnlp/stanza-bxr/resolve/85befbe336e71a4c7f007539318d3a3c08bde2a8/models/tokenize/bdt_nocharlm.pt"
+  },
+  "stanza/ckb/models/depparse/mukri_nocharlm.pt": {
+   "digest": "7fdecaac2737fddc5814259b3dc1b0c90614b7a93fdfece2c0564a0d4125c4c9",
+   "size": 84482960,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ckb/resolve/a0deabb3f9d66a4f8b33576986167867f328c174/models/depparse/mukri_nocharlm.pt"
+  },
+  "stanza/ckb/models/lemma/mukri_nocharlm.pt": {
+   "digest": "ffcb97cea5021fbba305d67004a614d5657eeda88b95cb0a4719dd39b78f3e2e",
+   "size": 1931636,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ckb/resolve/a0deabb3f9d66a4f8b33576986167867f328c174/models/lemma/mukri_nocharlm.pt"
+  },
+  "stanza/ckb/models/mwt/mukri.pt": {
+   "digest": "ca41ada0741bf679104a595b316e78f2040ab987a785821b7f11f23067c3b4b1",
+   "size": 561863,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ckb/resolve/a0deabb3f9d66a4f8b33576986167867f328c174/models/mwt/mukri.pt"
+  },
+  "stanza/ckb/models/pos/mukri_nocharlm.pt": {
+   "digest": "455eded9c3d23e74169e974529d86f43a10f7a0f234e6a9e057668459bc3df51",
+   "size": 16171228,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ckb/resolve/a0deabb3f9d66a4f8b33576986167867f328c174/models/pos/mukri_nocharlm.pt"
+  },
+  "stanza/ckb/models/pretrain/fasttext157.pt": {
+   "digest": "92737ccba662dc611ef0aca3bb052ebcaf321421f184aab07a909c3a83628ec1",
+   "size": 185003479,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ckb/resolve/a0deabb3f9d66a4f8b33576986167867f328c174/models/pretrain/fasttext157.pt"
+  },
+  "stanza/ckb/models/tokenize/mukri_nocharlm.pt": {
+   "digest": "36c5ccf70221c4a31985de8854c540180f27d3862e66c465b49e2188ab816ae5",
+   "size": 626351,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ckb/resolve/a0deabb3f9d66a4f8b33576986167867f328c174/models/tokenize/mukri_nocharlm.pt"
+  },
+  "stanza/cy/models/depparse/ccg_nocharlm.pt": {
+   "digest": "7742924361ad392b28fa5a1747cd2df42d28cbeada6e83a549ed693ec0975f6c",
+   "size": 96424240,
+   "url": "https://huggingface.co/stanfordnlp/stanza-cy/resolve/76fff36508df1af8341a9799b13c37cc7e6b6c00/models/depparse/ccg_nocharlm.pt"
+  },
+  "stanza/cy/models/lemma/ccg_nocharlm.pt": {
+   "digest": "b88a82c8a0c047ae9de9834574b2dc837ec6078f59e6bdfd2b446e3e9a680d3a",
+   "size": 2027756,
+   "url": "https://huggingface.co/stanfordnlp/stanza-cy/resolve/76fff36508df1af8341a9799b13c37cc7e6b6c00/models/lemma/ccg_nocharlm.pt"
+  },
+  "stanza/cy/models/mwt/ccg.pt": {
+   "digest": "3c9614da5156be28009eba9a46eb184a351af36fc57f290670ae871715555292",
+   "size": 560650,
+   "url": "https://huggingface.co/stanfordnlp/stanza-cy/resolve/76fff36508df1af8341a9799b13c37cc7e6b6c00/models/mwt/ccg.pt"
+  },
+  "stanza/cy/models/pos/ccg_nocharlm.pt": {
+   "digest": "97f3b77bca1632a87484c07d2ac78136a3ebf3e694f8677f9cc1d143d455064b",
+   "size": 20725278,
+   "url": "https://huggingface.co/stanfordnlp/stanza-cy/resolve/76fff36508df1af8341a9799b13c37cc7e6b6c00/models/pos/ccg_nocharlm.pt"
+  },
+  "stanza/cy/models/pretrain/fasttext157.pt": {
+   "digest": "b7e9845cc853ee30b01ba9cae5ae82d64b35985a0ae46789b8f0edf7ec030b2f",
+   "size": 183982749,
+   "url": "https://huggingface.co/stanfordnlp/stanza-cy/resolve/76fff36508df1af8341a9799b13c37cc7e6b6c00/models/pretrain/fasttext157.pt"
+  },
+  "stanza/cy/models/tokenize/ccg_nocharlm.pt": {
+   "digest": "54ec9fe24f876e929c71538d5c6d654853a03b57a6578f99d1a19890a13d204d",
+   "size": 632774,
+   "url": "https://huggingface.co/stanfordnlp/stanza-cy/resolve/76fff36508df1af8341a9799b13c37cc7e6b6c00/models/tokenize/ccg_nocharlm.pt"
+  },
+  "stanza/gv/models/depparse/cadhan_nocharlm.pt": {
+   "digest": "d2755c4c22f8c99d8e70aba78c67b2f9fe390ae7e214d51ffa32ce7102c417b3",
+   "size": 93583190,
+   "url": "https://huggingface.co/stanfordnlp/stanza-gv/resolve/4851f7fe3c294c35436d598423550d770376b1e8/models/depparse/cadhan_nocharlm.pt"
+  },
+  "stanza/gv/models/lemma/cadhan_nocharlm.pt": {
+   "digest": "5eb9ffca75d9907a0cf3f08771e1ee326af24b56dd4518ee69714b445d0f5803",
+   "size": 1965278,
+   "url": "https://huggingface.co/stanfordnlp/stanza-gv/resolve/4851f7fe3c294c35436d598423550d770376b1e8/models/lemma/cadhan_nocharlm.pt"
+  },
+  "stanza/gv/models/mwt/cadhan.pt": {
+   "digest": "91a46e5246d0affe6d5da79b26a065f0392c59de4a074e0e3087e6a4d9a5973f",
+   "size": 563650,
+   "url": "https://huggingface.co/stanfordnlp/stanza-gv/resolve/4851f7fe3c294c35436d598423550d770376b1e8/models/mwt/cadhan.pt"
+  },
+  "stanza/gv/models/pos/cadhan_nocharlm.pt": {
+   "digest": "6710e7c714a54852e2142554306da8d39395387e2be388ca67b9cf7ea80926b9",
+   "size": 16968316,
+   "url": "https://huggingface.co/stanfordnlp/stanza-gv/resolve/4851f7fe3c294c35436d598423550d770376b1e8/models/pos/cadhan_nocharlm.pt"
+  },
+  "stanza/gv/models/pretrain/fasttext157.pt": {
+   "digest": "eb0a43949d9657cf520869932b67aea188ed9ef74fbf249948b748b841167ce7",
+   "size": 126874612,
+   "url": "https://huggingface.co/stanfordnlp/stanza-gv/resolve/4851f7fe3c294c35436d598423550d770376b1e8/models/pretrain/fasttext157.pt"
+  },
+  "stanza/gv/models/tokenize/cadhan_nocharlm.pt": {
+   "digest": "c3c199d91952725216ab0a0bb9d33b975e2b80bb386018c573857133f9c9c084",
+   "size": 628828,
+   "url": "https://huggingface.co/stanfordnlp/stanza-gv/resolve/4851f7fe3c294c35436d598423550d770376b1e8/models/tokenize/cadhan_nocharlm.pt"
+  },
+  "stanza/hsb/models/depparse/ufal_nocharlm.pt": {
+   "digest": "2f107e6cdea17be3182b235ad3f118d0717df406aacbf414a36d219854238ede",
+   "size": 96820440,
+   "url": "https://huggingface.co/stanfordnlp/stanza-hsb/resolve/66bb71aad3a0841d80144ccab168760e75d322a6/models/depparse/ufal_nocharlm.pt"
+  },
+  "stanza/hsb/models/lemma/ufal_nocharlm.pt": {
+   "digest": "102c591b2ebee97c8e5f414971a1a273aa59b2e5bad2a6866c6e161a6a3ce8d9",
+   "size": 2059990,
+   "url": "https://huggingface.co/stanfordnlp/stanza-hsb/resolve/66bb71aad3a0841d80144ccab168760e75d322a6/models/lemma/ufal_nocharlm.pt"
+  },
+  "stanza/hsb/models/pos/ufal_nocharlm.pt": {
+   "digest": "3df69ce3b963f8d370be113913c5ad3d715d5a6c712bc1e98d3d10e8429ed90c",
+   "size": 17943656,
+   "url": "https://huggingface.co/stanfordnlp/stanza-hsb/resolve/66bb71aad3a0841d80144ccab168760e75d322a6/models/pos/ufal_nocharlm.pt"
+  },
+  "stanza/hsb/models/pretrain/fasttextwiki.pt": {
+   "digest": "95d169b30d113e4e5edb8f9e2269f82ee7345e01557e4fad6c9054e2fdaa54bd",
+   "size": 33402372,
+   "url": "https://huggingface.co/stanfordnlp/stanza-hsb/resolve/66bb71aad3a0841d80144ccab168760e75d322a6/models/pretrain/fasttextwiki.pt"
+  },
+  "stanza/hsb/models/tokenize/ufal_nocharlm.pt": {
+   "digest": "a943dd50ea1973df7017278c82ceab4f6723e78626b96a88c965aebd85fa150c",
+   "size": 637366,
+   "url": "https://huggingface.co/stanfordnlp/stanza-hsb/resolve/66bb71aad3a0841d80144ccab168760e75d322a6/models/tokenize/ufal_nocharlm.pt"
+  },
+  "stanza/ht/models/depparse/adolphe_nocharlm.pt": {
+   "digest": "c173443b31d3c0db1d096ba40ca202027ff1c29c6849a494ae4564fb945cc6c2",
+   "size": 96537621,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ht/resolve/4394cf3652a8b7ee44344588749381361477f526/models/depparse/adolphe_nocharlm.pt"
+  },
+  "stanza/ht/models/lemma/adolphe_nocharlm.pt": {
+   "digest": "33c1b8b50571fa62b088912e03968d6d8dbe81120dfc89c608342a38054c916e",
+   "size": 1980259,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ht/resolve/4394cf3652a8b7ee44344588749381361477f526/models/lemma/adolphe_nocharlm.pt"
+  },
+  "stanza/ht/models/pos/adolphe_nocharlm.pt": {
+   "digest": "0a166fdabf9f4f7e799eb80135475e5e1b5e4c25245660f484d4bbbe9a5b6aa0",
+   "size": 17729719,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ht/resolve/4394cf3652a8b7ee44344588749381361477f526/models/pos/adolphe_nocharlm.pt"
+  },
+  "stanza/ht/models/pretrain/fasttext157.pt": {
+   "digest": "7f96df25dd601c7a7a0cf39cade6d101ee7c3ff46c0aa5f660ffe0e48cf57eac",
+   "size": 138714206,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ht/resolve/4394cf3652a8b7ee44344588749381361477f526/models/pretrain/fasttext157.pt"
+  },
+  "stanza/ht/models/tokenize/adolphe_nocharlm.pt": {
+   "digest": "9b2e20faf453976fce5c67fef38cc6723524e705146f8ae42288ee2d493e257f",
+   "size": 628170,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ht/resolve/4394cf3652a8b7ee44344588749381361477f526/models/tokenize/adolphe_nocharlm.pt"
+  },
+  "stanza/is/models/depparse/icepahc_nocharlm.pt": {
+   "digest": "5d8494ca8789a777aed13b8df5b5f4c8e10193066effea682c839e0e364f06f6",
+   "size": 97162921,
+   "url": "https://huggingface.co/stanfordnlp/stanza-is/resolve/6e14cd397d61b1613ae664dcad3d2062083edcef/models/depparse/icepahc_nocharlm.pt"
+  },
+  "stanza/is/models/lemma/icepahc_nocharlm.pt": {
+   "digest": "0724f1a37bfdc92e459d21bf5101d1d2a3c3483527a9c4ab088071e895219e1c",
+   "size": 2675285,
+   "url": "https://huggingface.co/stanfordnlp/stanza-is/resolve/6e14cd397d61b1613ae664dcad3d2062083edcef/models/lemma/icepahc_nocharlm.pt"
+  },
+  "stanza/is/models/mwt/icepahc.pt": {
+   "digest": "160c6f1843014ab8cbb9ee845667f85bee13e176cc3319e7e201e0f176030625",
+   "size": 575212,
+   "url": "https://huggingface.co/stanfordnlp/stanza-is/resolve/6e14cd397d61b1613ae664dcad3d2062083edcef/models/mwt/icepahc.pt"
+  },
+  "stanza/is/models/pos/icepahc_nocharlm.pt": {
+   "digest": "15ae6ae7d09e9667b0a28cd55e6fe56044b19f083ece0ddb0f8064483a9aea80",
+   "size": 21640664,
+   "url": "https://huggingface.co/stanfordnlp/stanza-is/resolve/6e14cd397d61b1613ae664dcad3d2062083edcef/models/pos/icepahc_nocharlm.pt"
+  },
+  "stanza/is/models/pretrain/fasttext157.pt": {
+   "digest": "12575b233da0fdb248e787339351fdc33e2c6733bbe67db9cc1a165a17f49586",
+   "size": 184335554,
+   "url": "https://huggingface.co/stanfordnlp/stanza-is/resolve/6e14cd397d61b1613ae664dcad3d2062083edcef/models/pretrain/fasttext157.pt"
+  },
+  "stanza/is/models/tokenize/icepahc_nocharlm.pt": {
+   "digest": "ad40d06830c40d3ff2e3380dfd89eb38354b7edaec8b8922a2d14fd6af7840d4",
+   "size": 634610,
+   "url": "https://huggingface.co/stanfordnlp/stanza-is/resolve/6e14cd397d61b1613ae664dcad3d2062083edcef/models/tokenize/icepahc_nocharlm.pt"
+  },
+  "stanza/ka/models/depparse/glc_nocharlm.pt": {
+   "digest": "000ba4eea1835a4fbe66252ea2d51dcb4d28f3a55b8afaef444f5267bcf9c15f",
+   "size": 95428332,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ka/resolve/85e3969558c31925aca68eda8bf6ed16bfcf8273/models/depparse/glc_nocharlm.pt"
+  },
+  "stanza/ka/models/lemma/glc_nocharlm.pt": {
+   "digest": "575d8901e3a1ce62d5bc9312c9999989c1dff44a8fc80c7ef7e8426af9f41f00",
+   "size": 2248609,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ka/resolve/85e3969558c31925aca68eda8bf6ed16bfcf8273/models/lemma/glc_nocharlm.pt"
+  },
+  "stanza/ka/models/mwt/glc.pt": {
+   "digest": "2cf451bd3378da828afe0625bb9da92266adcf1fab3410e85bd9063dbdb735a2",
+   "size": 688997,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ka/resolve/85e3969558c31925aca68eda8bf6ed16bfcf8273/models/mwt/glc.pt"
+  },
+  "stanza/ka/models/pos/glc_nocharlm.pt": {
+   "digest": "ed02a39570950eb88a879a5014e6d82d50c37ad2d2d991b297b3e4d8bd223b58",
+   "size": 20662048,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ka/resolve/85e3969558c31925aca68eda8bf6ed16bfcf8273/models/pos/glc_nocharlm.pt"
+  },
+  "stanza/ka/models/pretrain/fasttext157.pt": {
+   "digest": "90bb020a7226b119c09c9a18ccbb06c1f4296ac714dac4588b7489c5e4533fea",
+   "size": 186194587,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ka/resolve/85e3969558c31925aca68eda8bf6ed16bfcf8273/models/pretrain/fasttext157.pt"
+  },
+  "stanza/ka/models/tokenize/glc_nocharlm.pt": {
+   "digest": "e2f5eba6ceef4a7b4a3735620ce8ac849f604e99942e6a4751c1f3dd20f034f5",
+   "size": 648714,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ka/resolve/85e3969558c31925aca68eda8bf6ed16bfcf8273/models/tokenize/glc_nocharlm.pt"
+  },
+  "stanza/kk/models/depparse/ktb_nocharlm.pt": {
+   "digest": "369688685523ffdf9e345d2386750ad19639881a319a2b6457211fb8903649e0",
+   "size": 94921277,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kk/resolve/657b4327d297dca431c4b24e9768eacf3c5fcd32/models/depparse/ktb_nocharlm.pt"
+  },
+  "stanza/kk/models/lemma/ktb_nocharlm.pt": {
+   "digest": "15cd71d38b9bca2452153c2e6a8d05fe92009c30cb951bc6f248a8fffed10971",
+   "size": 2024473,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kk/resolve/657b4327d297dca431c4b24e9768eacf3c5fcd32/models/lemma/ktb_nocharlm.pt"
+  },
+  "stanza/kk/models/mwt/ktb.pt": {
+   "digest": "2cd2a9e18f14515b45d20458979af0cc8fe9e94ea1f4204812042d462b3451f6",
+   "size": 552883,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kk/resolve/657b4327d297dca431c4b24e9768eacf3c5fcd32/models/mwt/ktb.pt"
+  },
+  "stanza/kk/models/pos/ktb_nocharlm.pt": {
+   "digest": "bd5e5021e4dbb753be86a0ebd2d2606e905b208cec999088187d842c283c4ebd",
+   "size": 20039517,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kk/resolve/657b4327d297dca431c4b24e9768eacf3c5fcd32/models/pos/ktb_nocharlm.pt"
+  },
+  "stanza/kk/models/pretrain/fasttext157.pt": {
+   "digest": "bf0ff72ec12e88b6ba36b786aee33b058683f3c790c8c8adbccbf738f808d3f4",
+   "size": 185166299,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kk/resolve/657b4327d297dca431c4b24e9768eacf3c5fcd32/models/pretrain/fasttext157.pt"
+  },
+  "stanza/kk/models/tokenize/ktb_nocharlm.pt": {
+   "digest": "ec106b8bea5217384da816027b6ec0fbd255b940c68fad1b87ba08973052d528",
+   "size": 633421,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kk/resolve/657b4327d297dca431c4b24e9768eacf3c5fcd32/models/tokenize/ktb_nocharlm.pt"
+  },
+  "stanza/kmr/models/depparse/mg_nocharlm.pt": {
+   "digest": "9d61cece162b5f600f2c9a17e22dd1bf47eec7f4750eae78c6343a6cac00506f",
+   "size": 93611935,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kmr/resolve/3a1a6cddbf82118e8b4251f294a9fce6fe644d6a/models/depparse/mg_nocharlm.pt"
+  },
+  "stanza/kmr/models/lemma/mg_nocharlm.pt": {
+   "digest": "8005e2bcbad950c2cc1f0cd4e571d82bf2cbff52f91e25568e69af49939bd2c4",
+   "size": 2002979,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kmr/resolve/3a1a6cddbf82118e8b4251f294a9fce6fe644d6a/models/lemma/mg_nocharlm.pt"
+  },
+  "stanza/kmr/models/mwt/mg.pt": {
+   "digest": "f6dab72e39cce6fe875a6b3b2c4cdbb3ce2266255adff532ebf0f67750a872f9",
+   "size": 547211,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kmr/resolve/3a1a6cddbf82118e8b4251f294a9fce6fe644d6a/models/mwt/mg.pt"
+  },
+  "stanza/kmr/models/pos/mg_nocharlm.pt": {
+   "digest": "8c29e2ef7255c6d230f69dcf47d93cefc18a5e0106cdb5754d12c0762b8b4153",
+   "size": 20280792,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kmr/resolve/3a1a6cddbf82118e8b4251f294a9fce6fe644d6a/models/pos/mg_nocharlm.pt"
+  },
+  "stanza/kmr/models/pretrain/fasttextwiki.pt": {
+   "digest": "ad2420d4fb333d4759d2fc8dcc95630f7294965bc9fbd68983915a7de81c2490",
+   "size": 58476053,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kmr/resolve/3a1a6cddbf82118e8b4251f294a9fce6fe644d6a/models/pretrain/fasttextwiki.pt"
+  },
+  "stanza/kmr/models/tokenize/mg_nocharlm.pt": {
+   "digest": "2daa423c5a68694612cc2d7557298f6aeccd2b34771e436da1c4083faa31084c",
+   "size": 632457,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kmr/resolve/3a1a6cddbf82118e8b4251f294a9fce6fe644d6a/models/tokenize/mg_nocharlm.pt"
+  },
+  "stanza/kpv/models/depparse/lattice_nocharlm.pt": {
+   "digest": "5a62adc9b9a2c6e7aa0580bb490b06a7de938453b74b5c494f60cd51ff946939",
+   "size": 103268521,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kpv/resolve/b144c63046cba00b868c5366f60a77148a9cabab/models/depparse/lattice_nocharlm.pt"
+  },
+  "stanza/kpv/models/lemma/lattice_nocharlm.pt": {
+   "digest": "583e102f60decd085f472b9389ca08a80f21d7abf07eac1d76bd949d238597ce",
+   "size": 2008141,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kpv/resolve/b144c63046cba00b868c5366f60a77148a9cabab/models/lemma/lattice_nocharlm.pt"
+  },
+  "stanza/kpv/models/mwt/lattice.pt": {
+   "digest": "d0cc262262975e884b264977820b86c12109e426e7ccfc39355d8014b7164ea4",
+   "size": 461384,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kpv/resolve/b144c63046cba00b868c5366f60a77148a9cabab/models/mwt/lattice.pt"
+  },
+  "stanza/kpv/models/pos/lattice_nocharlm.pt": {
+   "digest": "8414173a30cb503a91ebca03516bc55d4894961b39a48d170c8b63dc40e48811",
+   "size": 21163791,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kpv/resolve/b144c63046cba00b868c5366f60a77148a9cabab/models/pos/lattice_nocharlm.pt"
+  },
+  "stanza/kpv/models/pretrain/fasttextwiki.pt": {
+   "digest": "f1dc0628acef7f02de3c63ed8efa6bc986d1f072af9fb22a26cd8881b62926da",
+   "size": 14869299,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kpv/resolve/b144c63046cba00b868c5366f60a77148a9cabab/models/pretrain/fasttextwiki.pt"
+  },
+  "stanza/kpv/models/tokenize/lattice_nocharlm.pt": {
+   "digest": "8df253f17f71c622eac4e91fbe7cab65a8812225567733f8e849fae2f1e48e3c",
+   "size": 631709,
+   "url": "https://huggingface.co/stanfordnlp/stanza-kpv/resolve/b144c63046cba00b868c5366f60a77148a9cabab/models/tokenize/lattice_nocharlm.pt"
+  },
+  "stanza/ky/models/depparse/ktmu_nocharlm.pt": {
+   "digest": "6a4649e01341d462857a56793090296b07b9be7e236d2d7b09ca2bcf458e35f5",
+   "size": 86623604,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ky/resolve/57a2749db59e4d177f67390ad670571521472fa7/models/depparse/ktmu_nocharlm.pt"
+  },
+  "stanza/ky/models/lemma/ktmu_nocharlm.pt": {
+   "digest": "cd4864b282cabb2288d185d674ff8f2a60d97accad11d6c2c559a0df43ee3883",
+   "size": 2055397,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ky/resolve/57a2749db59e4d177f67390ad670571521472fa7/models/lemma/ktmu_nocharlm.pt"
+  },
+  "stanza/ky/models/pos/ktmu_nocharlm.pt": {
+   "digest": "7fa07391b0cc618331a1a5f14b99aaa6a911dc602338cf544ea47ef3056689bf",
+   "size": 19006444,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ky/resolve/57a2749db59e4d177f67390ad670571521472fa7/models/pos/ktmu_nocharlm.pt"
+  },
+  "stanza/ky/models/pretrain/fasttext157.pt": {
+   "digest": "e806d7dd4376d7984b0e5f35f2de02e393d209de347a674281c9073d9f6d9c66",
+   "size": 308869146,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ky/resolve/57a2749db59e4d177f67390ad670571521472fa7/models/pretrain/fasttext157.pt"
+  },
+  "stanza/ky/models/tokenize/ktmu_nocharlm.pt": {
+   "digest": "9f5c1afafba1897395cfbd10cd1fd5c21f17876e0f6e44241be9f7a36a4df145",
+   "size": 635804,
+   "url": "https://huggingface.co/stanfordnlp/stanza-ky/resolve/57a2749db59e4d177f67390ad670571521472fa7/models/tokenize/ktmu_nocharlm.pt"
+  },
+  "stanza/my/models/tokenize/alt.pt": {
+   "digest": "cb7dfe4794e95ea837a6b18e8b50b5125afb60410991432f79c05ab9d85d3d20",
+   "size": 642065,
+   "url": "https://huggingface.co/stanfordnlp/stanza-my/resolve/a002b2a8a63df2d24710b563e0b45fc05e9cf18d/models/tokenize/alt.pt"
+  },
+  "stanza/myv/models/depparse/jr_nocharlm.pt": {
+   "digest": "1bba6e3aa1d17ac7b8fad7970848859ed5ab470e3bc844bdfa6dfca846bd22dc",
+   "size": 105789041,
+   "url": "https://huggingface.co/stanfordnlp/stanza-myv/resolve/4b238bc2401d6debb507cdf16060fa341339a70f/models/depparse/jr_nocharlm.pt"
+  },
+  "stanza/myv/models/lemma/jr_nocharlm.pt": {
+   "digest": "ffdf00eab7dca2372bbbe3d037f22928ed4c94284a3680e6e5473a5aec0b3a13",
+   "size": 1999549,
+   "url": "https://huggingface.co/stanfordnlp/stanza-myv/resolve/4b238bc2401d6debb507cdf16060fa341339a70f/models/lemma/jr_nocharlm.pt"
+  },
+  "stanza/myv/models/mwt/jr.pt": {
+   "digest": "8103ee43c7e60668fdb05880b0ef1ea4cc276cc8a7d85ef617923eb7144db460",
+   "size": 460083,
+   "url": "https://huggingface.co/stanfordnlp/stanza-myv/resolve/4b238bc2401d6debb507cdf16060fa341339a70f/models/mwt/jr.pt"
+  },
+  "stanza/myv/models/pos/jr_nocharlm.pt": {
+   "digest": "980bfb12344c45ada81253927e8ca877f92d87050d74488e318659a1bc9a1144",
+   "size": 22413998,
+   "url": "https://huggingface.co/stanfordnlp/stanza-myv/resolve/4b238bc2401d6debb507cdf16060fa341339a70f/models/pos/jr_nocharlm.pt"
+  },
+  "stanza/myv/models/pretrain/rootroo.pt": {
+   "digest": "a215715b9ed43631b43a3fac67fa223e4cabdb9cc95e3735850050b050a40611",
+   "size": 3907828,
+   "url": "https://huggingface.co/stanfordnlp/stanza-myv/resolve/4b238bc2401d6debb507cdf16060fa341339a70f/models/pretrain/rootroo.pt"
+  },
+  "stanza/myv/models/tokenize/jr_nocharlm.pt": {
+   "digest": "381bdf29e8ef8beef737b855337f3305ce902faec1d23887d36f774a3eab1d0f",
+   "size": 629006,
+   "url": "https://huggingface.co/stanfordnlp/stanza-myv/resolve/4b238bc2401d6debb507cdf16060fa341339a70f/models/tokenize/jr_nocharlm.pt"
+  },
+  "stanza/nds/models/depparse/lsdc_nocharlm.pt": {
+   "digest": "eac10e9506cc4d3140caaf1bbdffda0b039d763aa76e350106423b5fcdc4312d",
+   "size": 97472129,
+   "url": "https://huggingface.co/stanfordnlp/stanza-nds/resolve/689a45c9087815c717be8acaaa92f48bd87e784d/models/depparse/lsdc_nocharlm.pt"
+  },
+  "stanza/nds/models/lemma/lsdc_nocharlm.pt": {
+   "digest": "b5ef081cb6c638ba64eec76a92f64611160968771e4cab5bda61d984cfaad4be",
+   "size": 1978024,
+   "url": "https://huggingface.co/stanfordnlp/stanza-nds/resolve/689a45c9087815c717be8acaaa92f48bd87e784d/models/lemma/lsdc_nocharlm.pt"
+  },
+  "stanza/nds/models/pos/lsdc_nocharlm.pt": {
+   "digest": "4270efabb300e805dda46b1fc7fc4391f69036da67c468e2bbb9033f085a7060",
+   "size": 17577101,
+   "url": "https://huggingface.co/stanfordnlp/stanza-nds/resolve/689a45c9087815c717be8acaaa92f48bd87e784d/models/pos/lsdc_nocharlm.pt"
+  },
+  "stanza/nds/models/pretrain/fasttext157.pt": {
+   "digest": "8ef49417d7f22dc5f9e036dfe2a38b91c0a444e17e9bd0a5cccf84b0a935e3d4",
+   "size": 184186553,
+   "url": "https://huggingface.co/stanfordnlp/stanza-nds/resolve/689a45c9087815c717be8acaaa92f48bd87e784d/models/pretrain/fasttext157.pt"
+  },
+  "stanza/nds/models/tokenize/lsdc_nocharlm.pt": {
+   "digest": "690a4522e06657f45a2246d5032d40b1303715dbc6e6c1e2241e4da88174b33e",
+   "size": 628171,
+   "url": "https://huggingface.co/stanfordnlp/stanza-nds/resolve/689a45c9087815c717be8acaaa92f48bd87e784d/models/tokenize/lsdc_nocharlm.pt"
+  },
+  "stanza/oc/models/depparse/ttb_nocharlm.pt": {
+   "digest": "e271ebf61c2b5370a28be9b0be2f6c81d098316fd203af78a0107a77b72d56ac",
+   "size": 94907486,
+   "url": "https://huggingface.co/stanfordnlp/stanza-oc/resolve/80c8b2e533532b02c88e83addb64690b040b9c33/models/depparse/ttb_nocharlm.pt"
+  },
+  "stanza/oc/models/lemma/ttb_nocharlm.pt": {
+   "digest": "a6b6ad999a7fd40e5203db7be0007b944d246a9f8e10a91b9e046d407863dd6b",
+   "size": 2019577,
+   "url": "https://huggingface.co/stanfordnlp/stanza-oc/resolve/80c8b2e533532b02c88e83addb64690b040b9c33/models/lemma/ttb_nocharlm.pt"
+  },
+  "stanza/oc/models/mwt/ttb.pt": {
+   "digest": "f778dc7795379f437c59cb40d14855740e8c7b44bc67c4c6bb229b37a73514fb",
+   "size": 551568,
+   "url": "https://huggingface.co/stanfordnlp/stanza-oc/resolve/80c8b2e533532b02c88e83addb64690b040b9c33/models/mwt/ttb.pt"
+  },
+  "stanza/oc/models/pos/ttb_nocharlm.pt": {
+   "digest": "093d0ba836a9b734c28bf879be8f4dfaf53428995ccda70bb8716a516d414904",
+   "size": 15193569,
+   "url": "https://huggingface.co/stanfordnlp/stanza-oc/resolve/80c8b2e533532b02c88e83addb64690b040b9c33/models/pos/ttb_nocharlm.pt"
+  },
+  "stanza/oc/models/pretrain/fasttext157.pt": {
+   "digest": "8b819d7aabbca883f76dd6c6453c8b564195a4a31a1efe71243d98acb20ff6b9",
+   "size": 183896467,
+   "url": "https://huggingface.co/stanfordnlp/stanza-oc/resolve/80c8b2e533532b02c88e83addb64690b040b9c33/models/pretrain/fasttext157.pt"
+  },
+  "stanza/oc/models/tokenize/ttb_nocharlm.pt": {
+   "digest": "052c2c38ebcaf36b7660e11fb529e28af97a8939c08acea801dd907e2180cf2a",
+   "size": 632330,
+   "url": "https://huggingface.co/stanfordnlp/stanza-oc/resolve/80c8b2e533532b02c88e83addb64690b040b9c33/models/tokenize/ttb_nocharlm.pt"
+  },
+  "stanza/or/models/depparse/odtb_muril-large-cased.pt": {
+   "digest": "9708b05f5995e762e96de144958a937753cfbbc78bb182ffcf459598eb583ddd",
+   "size": 128302255,
+   "url": "https://huggingface.co/stanfordnlp/stanza-or/resolve/69ee9772c315c37dbbad9c29ed12ee09b88e7a8d/models/depparse/odtb_muril-large-cased.pt"
+  },
+  "stanza/or/models/lemma/odtb_nocharlm.pt": {
+   "digest": "8f2e33dd9be280227eef905385db659c9233ac039b92bf46b3be97b431e41efe",
+   "size": 1988440,
+   "url": "https://huggingface.co/stanfordnlp/stanza-or/resolve/69ee9772c315c37dbbad9c29ed12ee09b88e7a8d/models/lemma/odtb_nocharlm.pt"
+  },
+  "stanza/or/models/pos/odtb_muril-large-cased.pt": {
+   "digest": "875750c0d56c320012dfbce90a9e66989aeecfadd18fdfd79b58d04b92040c92",
+   "size": 36672849,
+   "url": "https://huggingface.co/stanfordnlp/stanza-or/resolve/69ee9772c315c37dbbad9c29ed12ee09b88e7a8d/models/pos/odtb_muril-large-cased.pt"
+  },
+  "stanza/or/models/pretrain/fasttext157.pt": {
+   "digest": "2c7229d5cb831e5e651a3a9f4becfc83eea888948277d766cfad44b210783d4c",
+   "size": 185287532,
+   "url": "https://huggingface.co/stanfordnlp/stanza-or/resolve/69ee9772c315c37dbbad9c29ed12ee09b88e7a8d/models/pretrain/fasttext157.pt"
+  },
+  "stanza/or/models/tokenize/odtb_nocharlm.pt": {
+   "digest": "f2f16c62c85b7576683be4de2c0163f39b8ed954c9c71ab84bed91e4e129b4ad",
+   "size": 630508,
+   "url": "https://huggingface.co/stanfordnlp/stanza-or/resolve/69ee9772c315c37dbbad9c29ed12ee09b88e7a8d/models/tokenize/odtb_nocharlm.pt"
+  },
+  "stanza/pa/models/depparse/rang_nocharlm.pt": {
+   "digest": "82828ef965e74194168165c0248fa910492e2f0a22399fc427cc77a183385e3b",
+   "size": 92865912,
+   "url": "https://huggingface.co/stanfordnlp/stanza-pa/resolve/42adc55d0dc484f393a141ea0fc85fc66c5271d3/models/depparse/rang_nocharlm.pt"
+  },
+  "stanza/pa/models/lemma/rang_nocharlm.pt": {
+   "digest": "6bf0ba888d16a2266f0abb1a2099976e6173faa6e5d069c3791c3678426abfcc",
+   "size": 1934922,
+   "url": "https://huggingface.co/stanfordnlp/stanza-pa/resolve/42adc55d0dc484f393a141ea0fc85fc66c5271d3/models/lemma/rang_nocharlm.pt"
+  },
+  "stanza/pa/models/pos/rang_nocharlm.pt": {
+   "digest": "6b8b0645dfb42e5f73739a72cf134577a1a0ff12a52f9bfed579a55436a3af23",
+   "size": 16637954,
+   "url": "https://huggingface.co/stanfordnlp/stanza-pa/resolve/42adc55d0dc484f393a141ea0fc85fc66c5271d3/models/pos/rang_nocharlm.pt"
+  },
+  "stanza/pa/models/pretrain/fasttext157gur.pt": {
+   "digest": "0776b83de2e964e09b7a2c1cff67e04adb6d8210b0e4054d4edfa15c3ccdde66",
+   "size": 184933126,
+   "url": "https://huggingface.co/stanfordnlp/stanza-pa/resolve/42adc55d0dc484f393a141ea0fc85fc66c5271d3/models/pretrain/fasttext157gur.pt"
+  },
+  "stanza/pa/models/tokenize/rang_nocharlm.pt": {
+   "digest": "9ef9ea74e0640cce998b30fd33b2c4a6738157fe6849b5702e8a11ee366953ee",
+   "size": 624560,
+   "url": "https://huggingface.co/stanfordnlp/stanza-pa/resolve/42adc55d0dc484f393a141ea0fc85fc66c5271d3/models/tokenize/rang_nocharlm.pt"
+  },
+  "stanza/sa/models/depparse/vedic_nocharlm.pt": {
+   "digest": "1dccff0b935a5a73134eab9ab8ac7d6219c2ebf3181e72ee16a918e9e5e27cfa",
+   "size": 115938154,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sa/resolve/5ed7c17b7e3882f2412e5b681f0b738d5aeff642/models/depparse/vedic_nocharlm.pt"
+  },
+  "stanza/sa/models/lemma/vedic_nocharlm.pt": {
+   "digest": "ae125f2427f27e39262ba1aa7ad154447c7a2f6130b03355f3027fbeca4a7d87",
+   "size": 2257001,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sa/resolve/5ed7c17b7e3882f2412e5b681f0b738d5aeff642/models/lemma/vedic_nocharlm.pt"
+  },
+  "stanza/sa/models/pos/vedic_nocharlm.pt": {
+   "digest": "f0ba18d69bf9b33f57ab82028080ef7248689cb9bf623812b45ffa7582497272",
+   "size": 17424153,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sa/resolve/5ed7c17b7e3882f2412e5b681f0b738d5aeff642/models/pos/vedic_nocharlm.pt"
+  },
+  "stanza/sa/models/pretrain/fasttext157.pt": {
+   "digest": "d698cda7d2277c7ecd74b49ef585e37ddfd33f999e5f7433427c3c6d26b9eb60",
+   "size": 186438324,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sa/resolve/5ed7c17b7e3882f2412e5b681f0b738d5aeff642/models/pretrain/fasttext157.pt"
+  },
+  "stanza/sa/models/tokenize/vedic_nocharlm.pt": {
+   "digest": "46b8030a1118e6e5edb080574ad0bfbfd527a57939bdd122f29b7fafa2d690b4",
+   "size": 621775,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sa/resolve/5ed7c17b7e3882f2412e5b681f0b738d5aeff642/models/tokenize/vedic_nocharlm.pt"
+  },
+  "stanza/sd/models/backward_charlm/isra.pt": {
+   "digest": "cd7f5cedf395ec4f76c15459610fa025f82670677f841e32386edb393e93f7d2",
+   "size": 19389315,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sd/resolve/9a81d90b7710f73ba7d719fe331495e9643fceb0/models/backward_charlm/isra.pt"
+  },
+  "stanza/sd/models/depparse/isra_nocharlm.pt": {
+   "digest": "27ba77495823fe83e4d43c5dc9e6d6594c70a15b8f491a04d5681662952eeed3",
+   "size": 95714054,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sd/resolve/9a81d90b7710f73ba7d719fe331495e9643fceb0/models/depparse/isra_nocharlm.pt"
+  },
+  "stanza/sd/models/forward_charlm/isra.pt": {
+   "digest": "baacf66b73bce1ac7847edb861deb8c5e9d149ab2a6b884b9f2095b0e3282080",
+   "size": 19389347,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sd/resolve/9a81d90b7710f73ba7d719fe331495e9643fceb0/models/forward_charlm/isra.pt"
+  },
+  "stanza/sd/models/lemma/isra_nocharlm.pt": {
+   "digest": "b8a1c9f49b95b887cc0d08f55cfd37a110d711b9cb3a72f0e0ca83a4cda16b60",
+   "size": 2036085,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sd/resolve/9a81d90b7710f73ba7d719fe331495e9643fceb0/models/lemma/isra_nocharlm.pt"
+  },
+  "stanza/sd/models/pos/isra_charlm.pt": {
+   "digest": "d461459ef8fc12f57aeff23ea6a375672ca7240baba0fd756c228cf7b1e49bfe",
+   "size": 36024652,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sd/resolve/9a81d90b7710f73ba7d719fe331495e9643fceb0/models/pos/isra_charlm.pt"
+  },
+  "stanza/sd/models/pretrain/isra.pt": {
+   "digest": "7172a107a3a91d711934898d3e8735dc7213680c894cb7d5a4e7d197dc5c7c48",
+   "size": 97831178,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sd/resolve/9a81d90b7710f73ba7d719fe331495e9643fceb0/models/pretrain/isra.pt"
+  },
+  "stanza/sd/models/tokenize/isra_nocharlm.pt": {
+   "digest": "c78aec59ce1b98fbaed05f01f0e7530d5215a9192adb789461a556fddda5b0d4",
+   "size": 637415,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sd/resolve/9a81d90b7710f73ba7d719fe331495e9643fceb0/models/tokenize/isra_nocharlm.pt"
+  },
+  "stanza/sq/models/depparse/combined_nocharlm.pt": {
+   "digest": "1198fbdcac866e14ee538bad76cf5b071fefc4f18006c25e75f7d7b14cad310e",
+   "size": 95468652,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sq/resolve/c8a3f3f8aa3c13afebfcf5fa4aac7542dd4fdb97/models/depparse/combined_nocharlm.pt"
+  },
+  "stanza/sq/models/lemma/combined_nocharlm.pt": {
+   "digest": "0500955fd6759a1875db75da98312ab591489686d47aa75172cbde0aa1bf1ce7",
+   "size": 1958204,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sq/resolve/c8a3f3f8aa3c13afebfcf5fa4aac7542dd4fdb97/models/lemma/combined_nocharlm.pt"
+  },
+  "stanza/sq/models/mwt/combined.pt": {
+   "digest": "5d01b4d5a46490c7db20a5d5e7dad3c3b2fdb6bca8c2d456809cddae56d7b0eb",
+   "size": 552930,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sq/resolve/c8a3f3f8aa3c13afebfcf5fa4aac7542dd4fdb97/models/mwt/combined.pt"
+  },
+  "stanza/sq/models/pos/combined_nocharlm.pt": {
+   "digest": "d562b3f4491f4482f6c48d61333679b95223beabe8605a0437ee05ff32be84f8",
+   "size": 20441907,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sq/resolve/c8a3f3f8aa3c13afebfcf5fa4aac7542dd4fdb97/models/pos/combined_nocharlm.pt"
+  },
+  "stanza/sq/models/pretrain/fasttext157.pt": {
+   "digest": "183518289a257e9a89e86012e270de80dac5d7bc931573143adacd7d1682fc05",
+   "size": 184049909,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sq/resolve/c8a3f3f8aa3c13afebfcf5fa4aac7542dd4fdb97/models/pretrain/fasttext157.pt"
+  },
+  "stanza/sq/models/tokenize/combined_nocharlm.pt": {
+   "digest": "f3b2e3e277a903229971a9c4a50b6e6f67993f800f5df5fec76f81c2e8fb8759",
+   "size": 628263,
+   "url": "https://huggingface.co/stanfordnlp/stanza-sq/resolve/c8a3f3f8aa3c13afebfcf5fa4aac7542dd4fdb97/models/tokenize/combined_nocharlm.pt"
+  },
+  "stanza/th/models/depparse/tud_nocharlm.pt": {
+   "digest": "f277dcdbd4011906a278545269e32b09337b9e6d095737f5433abe8eb624d2f8",
+   "size": 94552092,
+   "url": "https://huggingface.co/stanfordnlp/stanza-th/resolve/e48fea31dbb260a2bc924a42357bb1db843989de/models/depparse/tud_nocharlm.pt"
+  },
+  "stanza/th/models/pos/tud_nocharlm.pt": {
+   "digest": "5d2ba3049c13d846483496ac0ddeadbdc70fdfb80bb32b8f0ff4ce99fcd28fc9",
+   "size": 15635030,
+   "url": "https://huggingface.co/stanfordnlp/stanza-th/resolve/e48fea31dbb260a2bc924a42357bb1db843989de/models/pos/tud_nocharlm.pt"
+  },
+  "stanza/th/models/pretrain/fasttext157.pt": {
+   "digest": "88754c136ccc03d5d0a09a83ed01640964b25eab0e048b196a3fc52936402b45",
+   "size": 184384419,
+   "url": "https://huggingface.co/stanfordnlp/stanza-th/resolve/e48fea31dbb260a2bc924a42357bb1db843989de/models/pretrain/fasttext157.pt"
+  },
+  "stanza/th/models/tokenize/tud_nocharlm.pt": {
+   "digest": "4ef1a38171bdc87b70525afbd41e7d863dd453fb0cc0786726266b48e5f61cb3",
+   "size": 2313370,
+   "url": "https://huggingface.co/stanfordnlp/stanza-th/resolve/e48fea31dbb260a2bc924a42357bb1db843989de/models/tokenize/tud_nocharlm.pt"
+  },
+  "stanza/tk/models/depparse/native.pt": {
+   "digest": "9c4501e9cb7cfe73736be7852eaaca35c10a51c7e1cca763bd67189bcbcc03d0",
+   "size": 103642333,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.1/tk_tuecl_nocharlm_parser.pt"
+  },
+  "stanza/tk/models/lemma/native.pt": {
+   "digest": "c6cb4f2160f498398b9e22f283bbc17afe38a603ee0f5016777ec6c046cb394d",
+   "size": 2781477,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.1/tk_tuecl_nocharlm_lemmatizer.pt"
+  },
+  "stanza/tk/models/pos/native.pt": {
+   "digest": "0c1f3e2031737065a798ce358bca3a1a25273dd3b51072954ec6b42f3d84e2f5",
+   "size": 21508604,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.1/tk_tuecl_nocharlm_tagger.pt"
+  },
+  "stanza/tk/models/pretrain/native.pt": {
+   "digest": "a4d8fb98535b93887c267e7fc3a5d987c0a2717e09838f1e87ae823f71c27fd5",
+   "size": 247150879,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.1/tk_tuecl.pretrain.pt"
+  },
+  "stanza/tk/models/tokenize/native.pt": {
+   "digest": "3c2dcd6cfec15d2bb35b5072ffbea01ce3195ba18c597bd7a6ad299a62d1c8df",
+   "size": 632163,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.1/tk_tuecl_nocharlm_tokenizer.pt"
+  },
+  "stanza/tt/models/depparse/native.pt": {
+   "digest": "bc0b0c84b1aac4a78d32e29932519beac0155a4b3a5584951b368a768f3a1dee",
+   "size": 96269354,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.3/tt_nmctt_nocharlm_parser.pt"
+  },
+  "stanza/tt/models/lemma/native.pt": {
+   "digest": "af2e09f7decf90fed04e22b76c245525aec4c9461517a949a48e50ac2694192a",
+   "size": 2381433,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.3/tt_nmctt_nocharlm_lemmatizer.pt"
+  },
+  "stanza/tt/models/pos/native.pt": {
+   "digest": "a2a48865f7ad68438427ca6b94cba600ad5ed7031bd75e95c7bd7fb6b82ada1c",
+   "size": 17988696,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.3/tt_nmctt_nocharlm_tagger.pt"
+  },
+  "stanza/tt/models/pretrain/native.pt": {
+   "digest": "5a76bd69b57355970cb64f60108c36c81a6aa3d6f7fcc3e74d5f1fd1642a9ade",
+   "size": 1165982900,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.3/tt_nmctt.pretrain.pt.part00"
+  },
+  "stanza/tt/models/tokenize/native.pt": {
+   "digest": "0359279a322ba550bf9d0af2e21ad7ffc5f60f3d1598c4dfef806ee64243efcd",
+   "size": 635002,
+   "url": "https://github.com/turkic-nlp/trained-stanza-models/releases/download/v0.1.3/tt_nmctt_nocharlm_tokenizer.pt"
+  },
+  "stanza/uz/models/depparse/uzudt_nocharlm.pt": {
+   "digest": "6881a79c1aa0967583d5f66f10df6204e877c899a6ad026bff055ea97f4af32c",
+   "size": 96136043,
+   "url": "https://huggingface.co/stanfordnlp/stanza-uz/resolve/4238e700e8249657454e959d979466995e80ac14/models/depparse/uzudt_nocharlm.pt"
+  },
+  "stanza/uz/models/lemma/uzudt_nocharlm.pt": {
+   "digest": "f06886a5ad12e7c385774110eaa1bcd154054c12c4f411fe1dbccca5d66b32a0",
+   "size": 1949742,
+   "url": "https://huggingface.co/stanfordnlp/stanza-uz/resolve/4238e700e8249657454e959d979466995e80ac14/models/lemma/uzudt_nocharlm.pt"
+  },
+  "stanza/uz/models/pos/uzudt_nocharlm.pt": {
+   "digest": "50add355f733685fd0658b1e2315985fceb84d98cb8f5a384c9aa5bcb8b5a8c1",
+   "size": 19893435,
+   "url": "https://huggingface.co/stanfordnlp/stanza-uz/resolve/4238e700e8249657454e959d979466995e80ac14/models/pos/uzudt_nocharlm.pt"
+  },
+  "stanza/uz/models/pretrain/fasttext157.pt": {
+   "digest": "bdb23a3faa17644a73a305de9616d2e4d118c56ef84f11f73e048a3079d1a78e",
+   "size": 184114982,
+   "url": "https://huggingface.co/stanfordnlp/stanza-uz/resolve/4238e700e8249657454e959d979466995e80ac14/models/pretrain/fasttext157.pt"
+  },
+  "stanza/uz/models/tokenize/uzudt_nocharlm.pt": {
+   "digest": "76c0090b4a8709d3a8f3f0622c1901ce282626c5845b63954b6c59ec6ed2d7ba",
+   "size": 624831,
+   "url": "https://huggingface.co/stanfordnlp/stanza-uz/resolve/4238e700e8249657454e959d979466995e80ac14/models/tokenize/uzudt_nocharlm.pt"
+  },
+  "stanza/wuu/models/depparse/shud_nopretrain.pt": {
+   "digest": "254f7d21bdf346f5ec7ebebcb36a710f7bdb07a25f0a7fbf2e47a903c5d69a73",
+   "size": 91488874,
+   "url": "https://huggingface.co/stanfordnlp/stanza-wuu/resolve/0ddf9e730b6f236af1efd79eb63fc3332a818cda/models/depparse/shud_nopretrain.pt"
+  },
+  "stanza/wuu/models/pos/shud_nopretrain.pt": {
+   "digest": "b8f1e99796c01b21bb25bf60394b907f55d3275382fa017944103cde3a293e5b",
+   "size": 17260369,
+   "url": "https://huggingface.co/stanfordnlp/stanza-wuu/resolve/0ddf9e730b6f236af1efd79eb63fc3332a818cda/models/pos/shud_nopretrain.pt"
+  },
+  "stanza/wuu/models/tokenize/shud_nocharlm.pt": {
+   "digest": "8d7e7772559302fba993d3e6337e39bc7367aada3e92df0ad56bb851f6e9fde1",
+   "size": 746453,
+   "url": "https://huggingface.co/stanfordnlp/stanza-wuu/resolve/0ddf9e730b6f236af1efd79eb63fc3332a818cda/models/tokenize/shud_nocharlm.pt"
+  },
+  "stanza/yi/models/depparse/yitb_nocharlm.pt": {
+   "digest": "ade813c75477bb54742beb93a9188ec9cf10dccf4929caa58217e24f7b34d103",
+   "size": 103296835,
+   "url": "https://huggingface.co/stanfordnlp/stanza-yi/resolve/950f7089b49cebb9d689b7df41f1331dc7dcd3ee/models/depparse/yitb_nocharlm.pt"
+  },
+  "stanza/yi/models/lemma/yitb_nocharlm.pt": {
+   "digest": "e56ca24c821486a7bad8d777ea0204bf0c8ed77109c8297ce0e0c6aa3b836312",
+   "size": 1994119,
+   "url": "https://huggingface.co/stanfordnlp/stanza-yi/resolve/950f7089b49cebb9d689b7df41f1331dc7dcd3ee/models/lemma/yitb_nocharlm.pt"
+  },
+  "stanza/yi/models/mwt/yitb.pt": {
+   "digest": "b8b2aa389ef98853316a4a30298c521a19439b8dffd4ba0226d6c4ef19a79853",
+   "size": 562028,
+   "url": "https://huggingface.co/stanfordnlp/stanza-yi/resolve/950f7089b49cebb9d689b7df41f1331dc7dcd3ee/models/mwt/yitb.pt"
+  },
+  "stanza/yi/models/pos/yitb_nocharlm.pt": {
+   "digest": "e1078eaebe041557b28f407723444e1e9b0abdd1f07f850de2fe8e579211b55c",
+   "size": 15173318,
+   "url": "https://huggingface.co/stanfordnlp/stanza-yi/resolve/950f7089b49cebb9d689b7df41f1331dc7dcd3ee/models/pos/yitb_nocharlm.pt"
+  },
+  "stanza/yi/models/pretrain/fasttext157.pt": {
+   "digest": "0cf30791f5859260cafec552b94603a6c71e7f866672f49463bd39861db23cc9",
+   "size": 184958686,
+   "url": "https://huggingface.co/stanfordnlp/stanza-yi/resolve/950f7089b49cebb9d689b7df41f1331dc7dcd3ee/models/pretrain/fasttext157.pt"
+  },
+  "stanza/yi/models/tokenize/yitb_nocharlm.pt": {
+   "digest": "ca74ed43e4be239968026e44c21f6e410f047842aba1165f055148855d6222bd",
+   "size": 630212,
+   "url": "https://huggingface.co/stanfordnlp/stanza-yi/resolve/950f7089b49cebb9d689b7df41f1331dc7dcd3ee/models/tokenize/yitb_nocharlm.pt"
+  },
+  "stanza/zza/models/depparse/zsd_nocharlm.pt": {
+   "digest": "5c6441dea6fc0f5d58e0a54427bd7a2b3516751f0c07eb3287256bf6ceab4407",
+   "size": 91583770,
+   "url": "https://huggingface.co/stanfordnlp/stanza-zza/resolve/978a713172d4b885e4144600fa0b1b5da732c244/models/depparse/zsd_nocharlm.pt"
+  },
+  "stanza/zza/models/lemma/zsd_nocharlm.pt": {
+   "digest": "02ca04935f8aa76233a38ce00ea0ae76ff314ef9868649a79b10097621d8f578",
+   "size": 1942828,
+   "url": "https://huggingface.co/stanfordnlp/stanza-zza/resolve/978a713172d4b885e4144600fa0b1b5da732c244/models/lemma/zsd_nocharlm.pt"
+  },
+  "stanza/zza/models/mwt/zsd.pt": {
+   "digest": "32a2c8741df02bbe4c1cbb6ac9a9ac3610a8e6b4870c59d245c4e9da70497834",
+   "size": 555281,
+   "url": "https://huggingface.co/stanfordnlp/stanza-zza/resolve/978a713172d4b885e4144600fa0b1b5da732c244/models/mwt/zsd.pt"
+  },
+  "stanza/zza/models/pos/zsd_nocharlm.pt": {
+   "digest": "d514994e41ab2f66d2630b633e8cf4440dabc050b26f3a3cb2e97e2f785bad1f",
+   "size": 16807344,
+   "url": "https://huggingface.co/stanfordnlp/stanza-zza/resolve/978a713172d4b885e4144600fa0b1b5da732c244/models/pos/zsd_nocharlm.pt"
+  },
+  "stanza/zza/models/pretrain/fasttext157.pt": {
+   "digest": "2ce6bd38c4cd288532ddb801a3ba85c7bab5f465d2d651e1f919f3fa70a04af4",
+   "size": 184020612,
+   "url": "https://huggingface.co/stanfordnlp/stanza-zza/resolve/978a713172d4b885e4144600fa0b1b5da732c244/models/pretrain/fasttext157.pt"
+  },
+  "stanza/zza/models/tokenize/zsd_nocharlm.pt": {
+   "digest": "74be600057f9ebf440b663431f4172755c8d04b72131e9baf88c62dcef136fd6",
+   "size": 628715,
+   "url": "https://huggingface.co/stanfordnlp/stanza-zza/resolve/978a713172d4b885e4144600fa0b1b5da732c244/models/tokenize/zsd_nocharlm.pt"
+  },
+  "udpipe/afrikaans-afribooms-ud-2.5-191206.udpipe": {
+   "digest": "git:1506e5528eb784b09957dc03f25729e54230a1fc",
+   "size": 4901516,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/afrikaans-afribooms-ud-2.5-191206.udpipe"
+  },
+  "udpipe/armenian-armtdp-ud-2.5-191206.udpipe": {
+   "digest": "git:05bd7fc61f4ecf37f6f0de0295f7a0e3d00773f5",
+   "size": 8617218,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/armenian-armtdp-ud-2.5-191206.udpipe"
+  },
+  "udpipe/basque-bdt-ud-2.5-191206.udpipe": {
+   "digest": "git:939ca502efb5543e2dda36e250be43d79143d8fd",
+   "size": 13518247,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/basque-bdt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/belarusian-hse-ud-2.5-191206.udpipe": {
+   "digest": "git:bf997ccf04407598685cee351d503bfce370da77",
+   "size": 3761444,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/belarusian-hse-ud-2.5-191206.udpipe"
+  },
+  "udpipe/bulgarian-btb-ud-2.5-191206.udpipe": {
+   "digest": "git:553af02903c13d65894dcb5af855f93c0f328536",
+   "size": 14360705,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/bulgarian-btb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/catalan-ancora-ud-2.5-191206.udpipe": {
+   "digest": "git:079cd1f76e7720b804f1a7ad60e0f10324554b06",
+   "size": 18142787,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/catalan-ancora-ud-2.5-191206.udpipe"
+  },
+  "udpipe/chinese-gsd-ud-2.5-191206.udpipe": {
+   "digest": "git:cd695eaee25e43d639f853deddbb940f80f361a4",
+   "size": 13863905,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/chinese-gsd-ud-2.5-191206.udpipe"
+  },
+  "udpipe/chinese-gsdsimp-ud-2.5-191206.udpipe": {
+   "digest": "git:bbab025e511e6a9cc1c0492b20510c2c9375f95b",
+   "size": 11864178,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/chinese-gsdsimp-ud-2.5-191206.udpipe"
+  },
+  "udpipe/croatian-set-ud-2.5-191206.udpipe": {
+   "digest": "git:cd6838ba637d21e91484446aba6cb8a51e8bab78",
+   "size": 19236607,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/croatian-set-ud-2.5-191206.udpipe"
+  },
+  "udpipe/czech-pdt-ud-2.5-191206.udpipe": {
+   "digest": "git:3531f609897bbe8c0e0472197b95068f134673fe",
+   "size": 56093557,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/czech-pdt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/danish-ddt-ud-2.5-191206.udpipe": {
+   "digest": "git:a5afe382a08613265438efcd57fbf08ed488d326",
+   "size": 9505254,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/danish-ddt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/dutch-alpino-ud-2.5-191206.udpipe": {
+   "digest": "git:28113065e616a753ddb4467260b22941f98bf9ee",
+   "size": 17047727,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/dutch-alpino-ud-2.5-191206.udpipe"
+  },
+  "udpipe/estonian-edt-ud-2.5-191206.udpipe": {
+   "digest": "git:ff57e8eaaf0cf4d2a596dbdc42ac6cb959976a5e",
+   "size": 31323471,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/estonian-edt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/finnish-tdt-ud-2.5-191206.udpipe": {
+   "digest": "git:297e88d9b8e6126d6e1d938e038e8b9fdc59ab29",
+   "size": 21613253,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/finnish-tdt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/galician-ctg-ud-2.5-191206.udpipe": {
+   "digest": "git:0393b9745575af0dd43385a1d953bd2a3ff6a4ba",
+   "size": 8081346,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/galician-ctg-ud-2.5-191206.udpipe"
+  },
+  "udpipe/german-gsd-ud-2.5-191206.udpipe": {
+   "digest": "git:6890c813915a9bcf7abdab69b16f9d3f5372510a",
+   "size": 21301225,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/german-gsd-ud-2.5-191206.udpipe"
+  },
+  "udpipe/greek-gdt-ud-2.5-191206.udpipe": {
+   "digest": "git:7efe2e84c0065daf5d14bc15b0378680dd7001f8",
+   "size": 6445880,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/greek-gdt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/hebrew-htb-ud-2.5-191206.udpipe": {
+   "digest": "git:2b939864e49bfafb3b1f96fbeccba79ce8147a24",
+   "size": 15159463,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/hebrew-htb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/hindi-hdtb-ud-2.5-191206.udpipe": {
+   "digest": "git:c47773b90fd7992541259035d24a3dc98aa1297a",
+   "size": 25857814,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/hindi-hdtb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/hungarian-szeged-ud-2.5-191206.udpipe": {
+   "digest": "git:badda442553a86f822d90ca5be92e5f5a82bc6f8",
+   "size": 5677069,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/hungarian-szeged-ud-2.5-191206.udpipe"
+  },
+  "udpipe/indonesian-gsd-ud-2.5-191206.udpipe": {
+   "digest": "git:5f07850ebeffb06fe85059f0e1b35542646abf42",
+   "size": 14257882,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/indonesian-gsd-ud-2.5-191206.udpipe"
+  },
+  "udpipe/irish-idt-ud-2.5-191206.udpipe": {
+   "digest": "git:926e51eab62d6a1b0f1ff6a76392b8a3c37d92ef",
+   "size": 5817364,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/irish-idt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/italian-isdt-ud-2.5-191206.udpipe": {
+   "digest": "git:7e9d23e961fc4a1dde2a1954bc55dc2e84b1a3ae",
+   "size": 19298761,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/italian-isdt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/japanese-gsd-ud-2.5-191206.udpipe": {
+   "digest": "git:a8c62dfcc090ab9809be8a194dc233e387c9e2d5",
+   "size": 14102334,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/japanese-gsd-ud-2.5-191206.udpipe"
+  },
+  "udpipe/korean-kaist-ud-2.5-191206.udpipe": {
+   "digest": "git:2c19539942babb1a23032ef7c700a3338bd666fd",
+   "size": 41461296,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/korean-kaist-ud-2.5-191206.udpipe"
+  },
+  "udpipe/latin-ittb-ud-2.5-191206.udpipe": {
+   "digest": "git:30edb334c018401386326f607f443b6568589b5b",
+   "size": 19810306,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/latin-ittb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/latvian-lvtb-ud-2.5-191206.udpipe": {
+   "digest": "git:bd5b7b663f43c788e86e6be94627f3279fe3f706",
+   "size": 21694357,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/latvian-lvtb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/lithuanian-alksnis-ud-2.5-191206.udpipe": {
+   "digest": "git:2030eb419b847de5b6931659727ddd8210ef28f6",
+   "size": 8922692,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/lithuanian-alksnis-ud-2.5-191206.udpipe"
+  },
+  "udpipe/maltese-mudt-ud-2.5-191206.udpipe": {
+   "digest": "git:ebbdbe97b06c2c280dd182bd23870bafc325ded5",
+   "size": 4340088,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/maltese-mudt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/marathi-ufal-ud-2.5-191206.udpipe": {
+   "digest": "git:53c359052a8741bddeb88ff3c0ca400d0338c2eb",
+   "size": 2382087,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/marathi-ufal-ud-2.5-191206.udpipe"
+  },
+  "udpipe/norwegian-bokmaal-ud-2.5-191206.udpipe": {
+   "digest": "git:11b1841d43ea8ef718e24d5ca476beb6026f041d",
+   "size": 18535928,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/norwegian-bokmaal-ud-2.5-191206.udpipe"
+  },
+  "udpipe/norwegian-nynorsk-ud-2.5-191206.udpipe": {
+   "digest": "git:af4d0a52cf046dcf8ecbb25416961471909e50d0",
+   "size": 20835748,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/norwegian-nynorsk-ud-2.5-191206.udpipe"
+  },
+  "udpipe/persian-seraji-ud-2.5-191206.udpipe": {
+   "digest": "git:0e6a04b077b4d26e27fc8c095a3d06bac01233dd",
+   "size": 11499413,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/persian-seraji-ud-2.5-191206.udpipe"
+  },
+  "udpipe/polish-pdb-ud-2.5-191206.udpipe": {
+   "digest": "git:76faab4cb879fcd36a71d3207a46885848efbf30",
+   "size": 25523919,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/polish-pdb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/portuguese-gsd-ud-2.5-191206.udpipe": {
+   "digest": "git:8f80d3ebce6d84360a9e0a576ed92f01e9616564",
+   "size": 14715149,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/portuguese-gsd-ud-2.5-191206.udpipe"
+  },
+  "udpipe/romanian-rrt-ud-2.5-191206.udpipe": {
+   "digest": "git:87115bd228f02a01879e79e7aa52f4357d51eea3",
+   "size": 15083269,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/romanian-rrt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/russian-syntagrus-ud-2.5-191206.udpipe": {
+   "digest": "git:871fdac3328ae930d052def7037a07ba195372e0",
+   "size": 45859472,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/russian-syntagrus-ud-2.5-191206.udpipe"
+  },
+  "udpipe/scottish_gaelic-arcosg-ud-2.5-191206.udpipe": {
+   "digest": "git:4fbdf9f660ba725b14dbc01e0d35152e70a84c07",
+   "size": 5294517,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/scottish_gaelic-arcosg-ud-2.5-191206.udpipe"
+  },
+  "udpipe/serbian-set-ud-2.5-191206.udpipe": {
+   "digest": "git:c6850255238deb30688b36e48955bc9cadf6194f",
+   "size": 10387923,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/serbian-set-ud-2.5-191206.udpipe"
+  },
+  "udpipe/slovak-snk-ud-2.5-191206.udpipe": {
+   "digest": "git:936f47534591b14051dbfdc044760c347437db9d",
+   "size": 13510978,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/slovak-snk-ud-2.5-191206.udpipe"
+  },
+  "udpipe/slovenian-ssj-ud-2.5-191206.udpipe": {
+   "digest": "git:dd06db2b380a95e75918806431509b0cb2012340",
+   "size": 17139288,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/slovenian-ssj-ud-2.5-191206.udpipe"
+  },
+  "udpipe/swedish-talbanken-ud-2.5-191206.udpipe": {
+   "digest": "git:4569db9e019ca6b01a2ba2e65546cbb7bf04c5c3",
+   "size": 9440475,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/swedish-talbanken-ud-2.5-191206.udpipe"
+  },
+  "udpipe/tamil-ttb-ud-2.5-191206.udpipe": {
+   "digest": "git:ed6a52f3989dfd221f74efd4b9d4729caf06022c",
+   "size": 3201866,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/tamil-ttb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/telugu-mtg-ud-2.5-191206.udpipe": {
+   "digest": "git:b4b5da1e4fcd871274d8da3237323d9299a2d10d",
+   "size": 2168122,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/telugu-mtg-ud-2.5-191206.udpipe"
+  },
+  "udpipe/turkish-imst-ud-2.5-191206.udpipe": {
+   "digest": "git:de24a0b23533613404d1533f56552dbcc99e8e7e",
+   "size": 8396624,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/turkish-imst-ud-2.5-191206.udpipe"
+  },
+  "udpipe/ukrainian-iu-ud-2.5-191206.udpipe": {
+   "digest": "git:fe1ac613e8070b216921fd4257c3f042237c3edf",
+   "size": 16929888,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/ukrainian-iu-ud-2.5-191206.udpipe"
+  },
+  "udpipe/urdu-udtb-ud-2.5-191206.udpipe": {
+   "digest": "git:880b73f6a5d9540fb5caa42f9d06fd6a187a5164",
+   "size": 16057619,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/urdu-udtb-ud-2.5-191206.udpipe"
+  },
+  "udpipe/uyghur-udt-ud-2.5-191206.udpipe": {
+   "digest": "git:1830a49184111d22a50493f1b71dcf7a17318b19",
+   "size": 6089026,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/uyghur-udt-ud-2.5-191206.udpipe"
+  },
+  "udpipe/vietnamese-vtb-ud-2.5-191206.udpipe": {
+   "digest": "git:743fcb9a99e9fe21a3132e9080413843f1114d2b",
+   "size": 4673798,
+   "url": "https://raw.githubusercontent.com/jwijffels/udpipe.models.ud.2.5/17d6bbfb7f138f9ba2cf04692f15d892becf0246/inst/udpipe-ud-2.5-191206/vietnamese-vtb-ud-2.5-191206.udpipe"
+  }
+ },
+ "languages": [
+  "af",
+  "als",
+  "am",
+  "an",
+  "ar",
+  "arz",
+  "as",
+  "ast",
+  "av",
+  "az",
+  "azb",
+  "ba",
+  "bar",
+  "bcl",
+  "be",
+  "bg",
+  "bh",
+  "bn",
+  "bo",
+  "bpy",
+  "br",
+  "bs",
+  "bxr",
+  "ca",
+  "cbk",
+  "ce",
+  "ceb",
+  "ckb",
+  "co",
+  "cs",
+  "cv",
+  "cy",
+  "da",
+  "de",
+  "diq",
+  "dsb",
+  "dty",
+  "dv",
+  "el",
+  "eml",
+  "en",
+  "eo",
+  "es",
+  "et",
+  "eu",
+  "fa",
+  "fi",
+  "fr",
+  "frr",
+  "fy",
+  "ga",
+  "gd",
+  "gl",
+  "gn",
+  "gom",
+  "gu",
+  "gv",
+  "he",
+  "hi",
+  "hif",
+  "hr",
+  "hsb",
+  "ht",
+  "hu",
+  "hy",
+  "ia",
+  "id",
+  "ie",
+  "ilo",
+  "io",
+  "is",
+  "it",
+  "ja",
+  "jbo",
+  "jv",
+  "ka",
+  "kk",
+  "km",
+  "kn",
+  "ko",
+  "krc",
+  "ku",
+  "kv",
+  "kw",
+  "ky",
+  "la",
+  "lb",
+  "lez",
+  "li",
+  "lmo",
+  "lo",
+  "lrc",
+  "lt",
+  "lv",
+  "mai",
+  "mg",
+  "mhr",
+  "min",
+  "mk",
+  "ml",
+  "mn",
+  "mr",
+  "mrj",
+  "ms",
+  "mt",
+  "mwl",
+  "my",
+  "myv",
+  "mzn",
+  "nah",
+  "nap",
+  "nds",
+  "ne",
+  "new",
+  "nl",
+  "nn",
+  "no",
+  "oc",
+  "or",
+  "os",
+  "pa",
+  "pam",
+  "pfl",
+  "pl",
+  "pms",
+  "pnb",
+  "ps",
+  "pt",
+  "qu",
+  "rm",
+  "ro",
+  "ru",
+  "rue",
+  "sa",
+  "sah",
+  "sc",
+  "scn",
+  "sco",
+  "sd",
+  "sh",
+  "si",
+  "sk",
+  "sl",
+  "so",
+  "sq",
+  "sr",
+  "su",
+  "sv",
+  "sw",
+  "ta",
+  "te",
+  "tg",
+  "th",
+  "tk",
+  "tl",
+  "tr",
+  "tt",
+  "tyv",
+  "ug",
+  "uk",
+  "ur",
+  "uz",
+  "vec",
+  "vep",
+  "vi",
+  "vls",
+  "vo",
+  "wa",
+  "war",
+  "wuu",
+  "xal",
+  "xmf",
+  "yi",
+  "yo",
+  "yue",
+  "zh"
+ ],
+ "routes": {
+  "af": {
+   "backend": "udpipe",
+   "model": "udpipe/afrikaans-afribooms-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "am": {
+   "backend": "amharic",
+   "model": "am",
+   "revision": "090bf70e0511390923b02f7ea975bc2ed2ef8fce"
+  },
+  "ar": {
+   "backend": "stanza",
+   "model": "ar",
+   "processors": {
+    "depparse": "padt_nocharlm",
+    "lemma": "padt_nocharlm",
+    "mwt": "padt",
+    "pos": "padt_nocharlm",
+    "tokenize": "padt_nocharlm"
+   },
+   "revision": "97b384fe848a724e034783da6feb3f313019d4ab"
+  },
+  "arz": {
+   "backend": "camel",
+   "model": "arz/parser/EGY.ARZTB.CAMeLBERT-MIX.model",
+   "revision": "feb0a316809f9ad165ebafded5d284611f188605"
+  },
+  "as": {
+   "backend": "stanza",
+   "model": "as",
+   "processors": {
+    "depparse": "aiw_nocharlm",
+    "lemma": "aiw_nocharlm",
+    "pos": "aiw_nocharlm",
+    "tokenize": "aiw_nocharlm"
+   },
+   "revision": "9c2e5b615f3780169dbb3e935d879afc5ee5c93c"
+  },
+  "az": {
+   "backend": "stanza",
+   "model": "az",
+   "processors": {
+    "depparse": "native",
+    "lemma": "native",
+    "pos": "native",
+    "tokenize": "native"
+   },
+   "revision": "v0.1.2"
+  },
+  "ba": {
+   "backend": "stanza",
+   "model": "ba",
+   "processors": {
+    "depparse": "native",
+    "lemma": "native",
+    "pos": "native",
+    "tokenize": "native"
+   },
+   "revision": "v0.1.4"
+  },
+  "be": {
+   "backend": "udpipe",
+   "model": "udpipe/belarusian-hse-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "bg": {
+   "backend": "udpipe",
+   "model": "udpipe/bulgarian-btb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "bxr": {
+   "backend": "stanza",
+   "model": "bxr",
+   "processors": {
+    "depparse": "bdt_nocharlm",
+    "lemma": "bdt_nocharlm",
+    "pos": "bdt_nocharlm",
+    "tokenize": "bdt_nocharlm"
+   },
+   "revision": "85befbe336e71a4c7f007539318d3a3c08bde2a8"
+  },
+  "ca": {
+   "backend": "udpipe",
+   "model": "udpipe/catalan-ancora-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ckb": {
+   "backend": "stanza",
+   "model": "ckb",
+   "processors": {
+    "depparse": "mukri_nocharlm",
+    "lemma": "mukri_nocharlm",
+    "mwt": "mukri",
+    "pos": "mukri_nocharlm",
+    "tokenize": "mukri_nocharlm"
+   },
+   "revision": "a0deabb3f9d66a4f8b33576986167867f328c174"
+  },
+  "cs": {
+   "backend": "udpipe",
+   "model": "udpipe/czech-pdt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "cy": {
+   "backend": "stanza",
+   "model": "cy",
+   "processors": {
+    "depparse": "ccg_nocharlm",
+    "lemma": "ccg_nocharlm",
+    "mwt": "ccg",
+    "pos": "ccg_nocharlm",
+    "tokenize": "ccg_nocharlm"
+   },
+   "revision": "76fff36508df1af8341a9799b13c37cc7e6b6c00"
+  },
+  "da": {
+   "backend": "udpipe",
+   "model": "udpipe/danish-ddt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "de": {
+   "backend": "udpipe",
+   "model": "udpipe/german-gsd-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "diq": {
+   "backend": "stanza",
+   "model": "zza",
+   "processors": {
+    "depparse": "zsd_nocharlm",
+    "lemma": "zsd_nocharlm",
+    "mwt": "zsd",
+    "pos": "zsd_nocharlm",
+    "tokenize": "zsd_nocharlm"
+   },
+   "revision": "978a713172d4b885e4144600fa0b1b5da732c244"
+  },
+  "el": {
+   "backend": "udpipe",
+   "model": "udpipe/greek-gdt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "en": {
+   "backend": "installed",
+   "model": "en_core_web_trf"
+  },
+  "es": {
+   "backend": "installed",
+   "model": "es_core_news_sm"
+  },
+  "et": {
+   "backend": "udpipe",
+   "model": "udpipe/estonian-edt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "eu": {
+   "backend": "udpipe",
+   "model": "udpipe/basque-bdt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "fa": {
+   "backend": "udpipe",
+   "model": "udpipe/persian-seraji-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "fi": {
+   "backend": "udpipe",
+   "model": "udpipe/finnish-tdt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "fr": {
+   "backend": "installed",
+   "model": "fr_core_news_sm"
+  },
+  "ga": {
+   "backend": "udpipe",
+   "model": "udpipe/irish-idt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "gd": {
+   "backend": "udpipe",
+   "model": "udpipe/scottish_gaelic-arcosg-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "gl": {
+   "backend": "udpipe",
+   "model": "udpipe/galician-ctg-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "gv": {
+   "backend": "stanza",
+   "model": "gv",
+   "processors": {
+    "depparse": "cadhan_nocharlm",
+    "lemma": "cadhan_nocharlm",
+    "mwt": "cadhan",
+    "pos": "cadhan_nocharlm",
+    "tokenize": "cadhan_nocharlm"
+   },
+   "revision": "4851f7fe3c294c35436d598423550d770376b1e8"
+  },
+  "he": {
+   "backend": "udpipe",
+   "model": "udpipe/hebrew-htb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "hi": {
+   "backend": "udpipe",
+   "model": "udpipe/hindi-hdtb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "hr": {
+   "backend": "udpipe",
+   "model": "udpipe/croatian-set-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "hsb": {
+   "backend": "stanza",
+   "model": "hsb",
+   "processors": {
+    "depparse": "ufal_nocharlm",
+    "lemma": "ufal_nocharlm",
+    "pos": "ufal_nocharlm",
+    "tokenize": "ufal_nocharlm"
+   },
+   "revision": "66bb71aad3a0841d80144ccab168760e75d322a6"
+  },
+  "ht": {
+   "backend": "stanza",
+   "model": "ht",
+   "processors": {
+    "depparse": "adolphe_nocharlm",
+    "lemma": "adolphe_nocharlm",
+    "pos": "adolphe_nocharlm",
+    "tokenize": "adolphe_nocharlm"
+   },
+   "revision": "4394cf3652a8b7ee44344588749381361477f526"
+  },
+  "hu": {
+   "backend": "udpipe",
+   "model": "udpipe/hungarian-szeged-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "hy": {
+   "backend": "udpipe",
+   "model": "udpipe/armenian-armtdp-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "id": {
+   "backend": "udpipe",
+   "model": "udpipe/indonesian-gsd-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "is": {
+   "backend": "stanza",
+   "model": "is",
+   "processors": {
+    "depparse": "icepahc_nocharlm",
+    "lemma": "icepahc_nocharlm",
+    "mwt": "icepahc",
+    "pos": "icepahc_nocharlm",
+    "tokenize": "icepahc_nocharlm"
+   },
+   "revision": "6e14cd397d61b1613ae664dcad3d2062083edcef"
+  },
+  "it": {
+   "backend": "udpipe",
+   "model": "udpipe/italian-isdt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ja": {
+   "backend": "udpipe",
+   "model": "udpipe/japanese-gsd-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ka": {
+   "backend": "stanza",
+   "model": "ka",
+   "processors": {
+    "depparse": "glc_nocharlm",
+    "lemma": "glc_nocharlm",
+    "mwt": "glc",
+    "pos": "glc_nocharlm",
+    "tokenize": "glc_nocharlm"
+   },
+   "revision": "85e3969558c31925aca68eda8bf6ed16bfcf8273"
+  },
+  "kk": {
+   "backend": "stanza",
+   "model": "kk",
+   "processors": {
+    "depparse": "ktb_nocharlm",
+    "lemma": "ktb_nocharlm",
+    "mwt": "ktb",
+    "pos": "ktb_nocharlm",
+    "tokenize": "ktb_nocharlm"
+   },
+   "revision": "657b4327d297dca431c4b24e9768eacf3c5fcd32"
+  },
+  "ko": {
+   "backend": "udpipe",
+   "model": "udpipe/korean-kaist-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ku": {
+   "backend": "stanza",
+   "model": "kmr",
+   "processors": {
+    "depparse": "mg_nocharlm",
+    "lemma": "mg_nocharlm",
+    "mwt": "mg",
+    "pos": "mg_nocharlm",
+    "tokenize": "mg_nocharlm"
+   },
+   "revision": "3a1a6cddbf82118e8b4251f294a9fce6fe644d6a"
+  },
+  "kv": {
+   "backend": "stanza",
+   "model": "kpv",
+   "processors": {
+    "depparse": "lattice_nocharlm",
+    "lemma": "lattice_nocharlm",
+    "mwt": "lattice",
+    "pos": "lattice_nocharlm",
+    "tokenize": "lattice_nocharlm"
+   },
+   "revision": "b144c63046cba00b868c5366f60a77148a9cabab"
+  },
+  "ky": {
+   "backend": "stanza",
+   "model": "ky",
+   "processors": {
+    "depparse": "ktmu_nocharlm",
+    "lemma": "ktmu_nocharlm",
+    "pos": "ktmu_nocharlm",
+    "tokenize": "ktmu_nocharlm"
+   },
+   "revision": "57a2749db59e4d177f67390ad670571521472fa7"
+  },
+  "la": {
+   "backend": "udpipe",
+   "model": "udpipe/latin-ittb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "lt": {
+   "backend": "udpipe",
+   "model": "udpipe/lithuanian-alksnis-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "lv": {
+   "backend": "udpipe",
+   "model": "udpipe/latvian-lvtb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "mk": {
+   "backend": "spacy_package",
+   "model": "mk_core_news_sm"
+  },
+  "mr": {
+   "backend": "udpipe",
+   "model": "udpipe/marathi-ufal-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ms": {
+   "backend": "malaya",
+   "model": "hf/ms",
+   "revision": "18bfb8e3d9076d5614f75af3160643adc20b9c7f"
+  },
+  "mt": {
+   "backend": "udpipe",
+   "model": "udpipe/maltese-mudt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "my": {
+   "backend": "spacy",
+   "model": "spacy/my/model",
+   "revision": "e9b5bcc47ddb606a50df9ef487b3ccef16ecce99",
+   "segmenter": {
+    "backend": "stanza",
+    "model": "my",
+    "processors": {
+     "tokenize": "alt"
+    }
+   }
+  },
+  "myv": {
+   "backend": "stanza",
+   "model": "myv",
+   "processors": {
+    "depparse": "jr_nocharlm",
+    "lemma": "jr_nocharlm",
+    "mwt": "jr",
+    "pos": "jr_nocharlm",
+    "tokenize": "jr_nocharlm"
+   },
+   "revision": "4b238bc2401d6debb507cdf16060fa341339a70f"
+  },
+  "nds": {
+   "backend": "stanza",
+   "model": "nds",
+   "processors": {
+    "depparse": "lsdc_nocharlm",
+    "lemma": "lsdc_nocharlm",
+    "pos": "lsdc_nocharlm",
+    "tokenize": "lsdc_nocharlm"
+   },
+   "revision": "689a45c9087815c717be8acaaa92f48bd87e784d"
+  },
+  "nl": {
+   "backend": "udpipe",
+   "model": "udpipe/dutch-alpino-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "nn": {
+   "backend": "udpipe",
+   "model": "udpipe/norwegian-nynorsk-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "no": {
+   "backend": "udpipe",
+   "model": "udpipe/norwegian-bokmaal-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "oc": {
+   "backend": "stanza",
+   "model": "oc",
+   "processors": {
+    "depparse": "ttb_nocharlm",
+    "lemma": "ttb_nocharlm",
+    "mwt": "ttb",
+    "pos": "ttb_nocharlm",
+    "tokenize": "ttb_nocharlm"
+   },
+   "revision": "80c8b2e533532b02c88e83addb64690b040b9c33"
+  },
+  "or": {
+   "backend": "stanza",
+   "model": "or",
+   "processors": {
+    "depparse": "odtb_muril-large-cased",
+    "lemma": "odtb_nocharlm",
+    "pos": "odtb_muril-large-cased",
+    "tokenize": "odtb_nocharlm"
+   },
+   "revision": "69ee9772c315c37dbbad9c29ed12ee09b88e7a8d"
+  },
+  "pa": {
+   "backend": "stanza",
+   "model": "pa",
+   "processors": {
+    "depparse": "rang_nocharlm",
+    "lemma": "rang_nocharlm",
+    "pos": "rang_nocharlm",
+    "tokenize": "rang_nocharlm"
+   },
+   "revision": "42adc55d0dc484f393a141ea0fc85fc66c5271d3"
+  },
+  "pl": {
+   "backend": "udpipe",
+   "model": "udpipe/polish-pdb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "pt": {
+   "backend": "udpipe",
+   "model": "udpipe/portuguese-gsd-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ro": {
+   "backend": "udpipe",
+   "model": "udpipe/romanian-rrt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ru": {
+   "backend": "udpipe",
+   "model": "udpipe/russian-syntagrus-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "sa": {
+   "backend": "stanza",
+   "model": "sa",
+   "processors": {
+    "depparse": "vedic_nocharlm",
+    "lemma": "vedic_nocharlm",
+    "pos": "vedic_nocharlm",
+    "tokenize": "vedic_nocharlm"
+   },
+   "revision": "5ed7c17b7e3882f2412e5b681f0b738d5aeff642"
+  },
+  "sd": {
+   "backend": "stanza",
+   "model": "sd",
+   "processors": {
+    "depparse": "isra_nocharlm",
+    "lemma": "isra_nocharlm",
+    "pos": "isra_charlm",
+    "tokenize": "isra_nocharlm"
+   },
+   "revision": "9a81d90b7710f73ba7d719fe331495e9643fceb0"
+  },
+  "sk": {
+   "backend": "udpipe",
+   "model": "udpipe/slovak-snk-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "sl": {
+   "backend": "udpipe",
+   "model": "udpipe/slovenian-ssj-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "sq": {
+   "backend": "stanza",
+   "model": "sq",
+   "processors": {
+    "depparse": "combined_nocharlm",
+    "lemma": "combined_nocharlm",
+    "mwt": "combined",
+    "pos": "combined_nocharlm",
+    "tokenize": "combined_nocharlm"
+   },
+   "revision": "c8a3f3f8aa3c13afebfcf5fa4aac7542dd4fdb97"
+  },
+  "sr": {
+   "backend": "udpipe",
+   "model": "udpipe/serbian-set-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "sv": {
+   "backend": "udpipe",
+   "model": "udpipe/swedish-talbanken-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ta": {
+   "backend": "udpipe",
+   "model": "udpipe/tamil-ttb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "te": {
+   "backend": "udpipe",
+   "model": "udpipe/telugu-mtg-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "th": {
+   "backend": "stanza",
+   "model": "th",
+   "processors": {
+    "depparse": "tud_nocharlm",
+    "lemma": "identity",
+    "pos": "tud_nocharlm",
+    "tokenize": "tud_nocharlm"
+   },
+   "revision": "e48fea31dbb260a2bc924a42357bb1db843989de"
+  },
+  "tk": {
+   "backend": "stanza",
+   "model": "tk",
+   "processors": {
+    "depparse": "native",
+    "lemma": "native",
+    "pos": "native",
+    "tokenize": "native"
+   },
+   "revision": "v0.1.1"
+  },
+  "tl": {
+   "backend": "spacy",
+   "model": "spacy/calamancy",
+   "revision": "4960655b2d63fd9f306d60d554a95d7bfa5dd25d"
+  },
+  "tr": {
+   "backend": "udpipe",
+   "model": "udpipe/turkish-imst-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "tt": {
+   "backend": "stanza",
+   "model": "tt",
+   "processors": {
+    "depparse": "native",
+    "lemma": "native",
+    "pos": "native",
+    "tokenize": "native"
+   },
+   "revision": "v0.1.3"
+  },
+  "ug": {
+   "backend": "udpipe",
+   "model": "udpipe/uyghur-udt-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "uk": {
+   "backend": "udpipe",
+   "model": "udpipe/ukrainian-iu-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "ur": {
+   "backend": "udpipe",
+   "model": "udpipe/urdu-udtb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "uz": {
+   "backend": "stanza",
+   "model": "uz",
+   "processors": {
+    "depparse": "uzudt_nocharlm",
+    "lemma": "uzudt_nocharlm",
+    "pos": "uzudt_nocharlm",
+    "tokenize": "uzudt_nocharlm"
+   },
+   "revision": "4238e700e8249657454e959d979466995e80ac14"
+  },
+  "vi": {
+   "backend": "udpipe",
+   "model": "udpipe/vietnamese-vtb-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246"
+  },
+  "wuu": {
+   "backend": "stanza",
+   "model": "wuu",
+   "processors": {
+    "depparse": "shud_nopretrain",
+    "lemma": "identity",
+    "pos": "shud_nopretrain",
+    "tokenize": "shud_nocharlm"
+   },
+   "revision": "0ddf9e730b6f236af1efd79eb63fc3332a818cda"
+  },
+  "yi": {
+   "backend": "stanza",
+   "model": "yi",
+   "processors": {
+    "depparse": "yitb_nocharlm",
+    "lemma": "yitb_nocharlm",
+    "mwt": "yitb",
+    "pos": "yitb_nocharlm",
+    "tokenize": "yitb_nocharlm"
+   },
+   "revision": "950f7089b49cebb9d689b7df41f1331dc7dcd3ee"
+  },
+  "yue": {
+   "backend": "cantonese",
+   "model": "hf/yue",
+   "revision": "5ee6d0ce162ddfd931e59b9f384d1285ee3ab779"
+  },
+  "zh": {
+   "backend": "udpipe",
+   "model": "udpipe/chinese-gsdsimp-ud-2.5-191206.udpipe",
+   "revision": "17d6bbfb7f138f9ba2cf04692f15d892becf0246",
+   "traditional": "udpipe/chinese-gsd-ud-2.5-191206.udpipe"
+  }
+ }
+}

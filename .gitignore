@@ -1,0 +1,18 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Local model downloads
+/models/
+/.cache/text-to-graph/
+
+# Tool and operating system metadata
+.ruff_cache/
+.DS_Store
